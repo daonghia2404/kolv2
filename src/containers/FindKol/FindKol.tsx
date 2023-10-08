@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Row, Col, Drawer } from 'antd';
+import { Row, Col, Drawer, DrawerProps } from 'antd';
 import dynamic from 'next/dynamic';
 
 import FilterCategory from '@/containers/FindKol/FilterCategory';
@@ -14,6 +14,8 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
 
+const DrawerModify: React.FC<DrawerProps & { children?: React.ReactNode }> = Drawer;
+
 const FindKol: React.FC<TFindKolProps> = () => {
   const loadMoreRef = useRef<HTMLDivElement>(null);
   const loadMoreEntry = useIntersectionObserver(loadMoreRef, {});
@@ -27,7 +29,7 @@ const FindKol: React.FC<TFindKolProps> = () => {
     if (isFetchNew) setKolDataState([]);
     setLoading(true);
     setTimeout(() => {
-      setKolDataState((prevState) => (isFetchNew ? dataFindKolCards : [...prevState, ...dataFindKolCards]));
+      setKolDataState((prevState: any) => (isFetchNew ? dataFindKolCards : [...prevState, ...dataFindKolCards]));
       setLoading(false);
     }, 2000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -69,7 +71,7 @@ const FindKol: React.FC<TFindKolProps> = () => {
       </div>
 
       <MediaQuery maxWidth={991}>
-        <Drawer
+        <DrawerModify
           {...drawerFilterMobileState}
           placement="right"
           className="FindKol-filter-category-mobile"
@@ -77,7 +79,7 @@ const FindKol: React.FC<TFindKolProps> = () => {
           onClose={handleCloseDrawerFilterMobile}
         >
           <FilterCategory onFilter={(): void => getData(true)} />
-        </Drawer>
+        </DrawerModify>
       </MediaQuery>
     </div>
   );

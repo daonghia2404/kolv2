@@ -1,7 +1,8 @@
 {
-  "name": "my-portfolio-client",
+  "name": "nextjs-project-base",
   "version": "0.1.0",
   "private": true,
+  "author": "daonghia2404@gmail.com",
   "scripts": {
     "start": "env-cmd -f .env next dev",
     "build:dev": "env-cmd -f .env.dev next build",

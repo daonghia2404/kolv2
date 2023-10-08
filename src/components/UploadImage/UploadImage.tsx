@@ -88,7 +88,7 @@ const UploadImage: React.FC<TUploadImageProps> = ({
               />
               {showPlaceholderEdit && (
                 <div className={classNames('UploadImage-placeholder flex items-center justify-center', shape)}>
-                  <Icon name={EIconName.Pencil} color={EIconColor.WHITE} />
+                  <Icon name={EIconName.PencilSquare} color={EIconColor.WHITE} />
                 </div>
               )}
             </>
@@ -99,7 +99,7 @@ const UploadImage: React.FC<TUploadImageProps> = ({
                   <Avatar {...avatarProps} />
                   {showPlaceholderEdit && (
                     <div className={classNames('UploadImage-placeholder flex items-center justify-center', shape)}>
-                      <Icon name={EIconName.Pencil} color={EIconColor.WHITE} />
+                      <Icon name={EIconName.PencilSquare} color={EIconColor.WHITE} />
                     </div>
                   )}
                 </>

@@ -24,7 +24,7 @@ const Breadcrumb: React.FC<TBreadcrumbProps> = ({ loading, className, options = 
     <AntdBreadcrumbModify
       style={style}
       className={classNames('Breadcrumb', className)}
-      separator={separator || <Icon name={EIconName.AngleRight} color={EIconColor.BLACK} />}
+      separator={separator || <Icon name={EIconName.ArrowRightShort} color={EIconColor.BLACK} />}
     >
       {options.map((option) => (
         <AntdItemBreadcrumbModify

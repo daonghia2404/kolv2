@@ -6,7 +6,7 @@ import { EIconColor } from '@/components/Icon';
 
 import { TLoadingProps } from './Loading.types';
 
-const Loading: React.FC<TLoadingProps> = ({ size = 24, color = EIconColor.GERALDINE }) => {
+const Loading: React.FC<TLoadingProps> = ({ size = 24, color = EIconColor.RADICAL_RED }) => {
   return (
     <Spin
       className="Loading"

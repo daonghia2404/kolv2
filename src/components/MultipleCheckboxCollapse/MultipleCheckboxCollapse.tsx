@@ -1,5 +1,5 @@
 import React from 'react';
-import { Collapse } from 'antd';
+import { Collapse, CollapsePanelProps, CollapseProps } from 'antd';
 
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Checkbox from '@/components/Checkbox';
@@ -8,6 +8,9 @@ import { TMultipleCheckboxCollapseData, TMultipleCheckboxCollapseProps } from '.
 import { dataFilterCategoryOptions, findChildrenOfOptions } from './MultipleCheckboxCollapse.data';
 
 const { Panel } = Collapse;
+
+const CollapseModify: React.FC<CollapseProps & { children?: React.ReactNode }> = Collapse;
+const PanelModify: React.FC<CollapsePanelProps & { children?: React.ReactNode }> = Panel;
 
 const MultipleCheckboxCollapse: React.FC<TMultipleCheckboxCollapseProps> = ({ value = [], onChange }) => {
   const valueIds = value.map((item) => item.key);
@@ -50,7 +53,7 @@ const MultipleCheckboxCollapse: React.FC<TMultipleCheckboxCollapseProps> = ({ va
 
   return (
     <div className="MultipleCheckboxCollapse">
-      <Collapse
+      <CollapseModify
         expandIcon={({ isActive }): React.ReactNode => (
           <div className="MultipleCheckboxCollapse-item-header-icon">
             <Icon name={isActive ? EIconName.Minus : EIconName.Plus} color={EIconColor.WHITE} />
@@ -66,7 +69,7 @@ const MultipleCheckboxCollapse: React.FC<TMultipleCheckboxCollapseProps> = ({ va
           const isCheckedParent = optionValueIds.length === optionChildrenIds.length;
 
           return (
-            <Panel
+            <PanelModify
               header={
                 <div className="MultipleCheckboxCollapse-item-header flex items-center">
                   <div className="MultipleCheckboxCollapse-item-header-title">{parent.title}</div>
@@ -140,10 +143,10 @@ const MultipleCheckboxCollapse: React.FC<TMultipleCheckboxCollapseProps> = ({ va
               ) : (
                 <></>
               )}
-            </Panel>
+            </PanelModify>
           );
         })}
-      </Collapse>
+      </CollapseModify>
     </div>
   );
 };

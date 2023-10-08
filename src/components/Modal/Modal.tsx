@@ -50,14 +50,14 @@ const Modal: React.FC<TModalProps> = ({
             <div className="Modal-actions flex justify-center">
               <Button
                 title="Đồng ý"
-                styleType={EButtonStyleType.PRIMARY}
+                styleType={EButtonStyleType.RED}
                 disabled={loading}
                 onClick={onSubmit}
                 {...confirmButton}
               />
               <Button
                 title="Huỷ bỏ"
-                styleType={EButtonStyleType.OUTLINE_GEYSER}
+                styleType={EButtonStyleType.OUTLINE_RED}
                 disabled={loading}
                 onClick={onClose}
                 {...cancelButton}

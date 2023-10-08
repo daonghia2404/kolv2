@@ -22,9 +22,9 @@ const Pagination: React.FC<TPaginationProps> = ({
   ): React.ReactNode => {
     switch (type) {
       case 'prev':
-        return <Button iconName={EIconName.AngleLeft} size="small" styleType={EButtonStyleType.OUTLINE_GEYSER} />;
+        return <Button iconName={EIconName.ArrowLeftShort} size="small" styleType={EButtonStyleType.OUTER_SPACE} />;
       case 'next':
-        return <Button iconName={EIconName.AngleRight} size="small" styleType={EButtonStyleType.OUTLINE_GEYSER} />;
+        return <Button iconName={EIconName.ArrowRightShort} size="small" styleType={EButtonStyleType.OUTER_SPACE} />;
       default:
         return originalElement;
     }

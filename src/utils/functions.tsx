@@ -61,7 +61,7 @@ export const showNotification = (type: ETypeNotification, description: string): 
         ...options,
         // message: 'Thành Công',
         message: '',
-        icon: <Icon name={EIconName.CircleCheck} color={EIconColor.WHITE} />,
+        // icon: <Icon name={EIconName.CircleCheck} color={EIconColor.WHITE} />,
       });
       break;
     case ETypeNotification.WARNING:
@@ -69,7 +69,7 @@ export const showNotification = (type: ETypeNotification, description: string): 
         ...options,
         // message: 'Cảnh Báo',
         message: '',
-        icon: <Icon name={EIconName.CircleWarning} color={EIconColor.WHITE} />,
+        // icon: <Icon name={EIconName.CircleWarning} color={EIconColor.WHITE} />,
       });
       break;
     case ETypeNotification.ERROR:
@@ -77,7 +77,7 @@ export const showNotification = (type: ETypeNotification, description: string): 
         ...options,
         // message: 'Lỗi',
         message: '',
-        icon: <Icon name={EIconName.CircleX} color={EIconColor.WHITE} />,
+        // icon: <Icon name={EIconName.CircleX} color={EIconColor.WHITE} />,
       });
       break;
     case ETypeNotification.INFO:
@@ -85,7 +85,7 @@ export const showNotification = (type: ETypeNotification, description: string): 
         ...options,
         // message: 'Thông Báo',
         message: '',
-        icon: <Icon name={EIconName.CircleInfo} color={EIconColor.WHITE} />,
+        // icon: <Icon name={EIconName.CircleInfo} color={EIconColor.WHITE} />,
       });
       break;
     default:

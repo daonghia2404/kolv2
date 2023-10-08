@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { useRouter } from 'next/router';
-import { Col, Drawer, Row } from 'antd';
+import { Col, Drawer, DrawerProps, Row } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -16,11 +16,13 @@ import Input from '@/components/Input';
 
 import { TDrawerMenuMobileProps } from './DrawerMenuMobile.types';
 
+const DrawerModify: React.FC<DrawerProps & { children?: React.ReactNode }> = Drawer;
+
 const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({ isLogged, visible, onClose }) => {
   const { asPath } = useRouter();
 
   return (
-    <Drawer
+    <DrawerModify
       visible={visible}
       onClose={onClose}
       className="DrawerMenuMobile"
@@ -105,7 +107,7 @@ const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({ isLogged, visible,
           )}
         </Row>
       </div>
-    </Drawer>
+    </DrawerModify>
   );
 };
 
