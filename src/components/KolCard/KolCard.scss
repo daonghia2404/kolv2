@@ -1,0 +1,238 @@
+@import '@/assets/styles/_global.scss';
+
+.KolCard {
+  position: relative;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  border: 1.5px solid rgba($white, 0.15);
+  cursor: pointer;
+  transition: $common-transition;
+
+  &-loading {
+    width: 100%;
+    .ant-skeleton-title {
+      width: 100%;
+      margin: 0;
+      height: 38.5rem;
+    }
+  }
+
+  &.horizontal {
+    display: flex;
+    align-items: center;
+    padding: 2.4rem;
+    column-gap: 2.4rem;
+
+    .KolCard {
+      &-loading {
+        margin: -2.4rem;
+
+        .ant-skeleton-title {
+          width: calc(100% + 2.4rem * 2);
+          height: 30rem;
+        }
+      }
+
+      &-image {
+        flex: 0 0 17rem;
+        max-width: 17rem;
+        width: 17rem;
+        height: 30rem;
+      }
+
+      &-info {
+        position: static;
+        flex: 1;
+        padding: 0;
+      }
+
+      &-name {
+        font-size: 2.4rem;
+      }
+
+      &-play {
+        top: unset;
+        bottom: calc(2.4rem + 1.2rem);
+        left: calc(17rem + 2.4rem - 1.2rem);
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  &.hide-info {
+    &:hover {
+      .KolCard {
+        &-info {
+          opacity: 1;
+        }
+      }
+    }
+
+    .KolCard {
+      &-info {
+        transition: $common-transition;
+        opacity: 0;
+      }
+    }
+  }
+
+  &:hover {
+    border-color: rgba(lighten($radical-red, 15%), 0.5);
+
+    .KolCard {
+      &-info {
+        &-overlay {
+          &.dark {
+            opacity: 0;
+          }
+
+          &.light {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &-image {
+    height: 38.5rem;
+    @include centerScaleImage;
+  }
+
+  &-badge {
+    position: absolute;
+    width: 12rem;
+    height: 2rem;
+    z-index: 3;
+    font-size: 0.8rem;
+    color: $white;
+    font-weight: 500;
+    top: 3rem;
+    right: 3rem;
+    transform: translate(50%, -50%) rotate(45deg);
+    background: $radical-red;
+
+    &.promotion {
+      background: linear-gradient(90deg, #FF1B6D 0%, #7F1BFF 100%);
+    }
+
+    .Icon {
+      width: 1.2rem;
+      height: 1.2rem;
+      flex: 0 0 1.2rem;
+      max-width: 1.2rem;
+    }
+  }
+
+  &-play {
+    position: absolute;
+    width: 4.2rem;
+    height: 4.2rem;
+    top: 2rem;
+    left: 2rem;
+    z-index: 3;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    @include centerOriginImage;
+  }
+
+  &-info {
+    @include fullAbsolute;
+    padding: 2rem;
+    z-index: 2;
+
+    &-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    &-overlay {
+      @include fullAbsolute;
+      transition: $common-transition;
+      pointer-events: none;
+
+      &.dark {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 39.34%, rgba(70, 64, 66, 0.71) 72.53%, #000 100%);
+      }
+
+      &.light {
+        opacity: 0;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 39.34%, rgba(160, 15, 67, 0.71) 72.53%, #970643 100%);
+      }
+    }
+  }
+
+  &-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: $white;
+    font-weight: 600;
+    column-gap: .8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &-description {
+    font-size: 1.4rem;
+    color: $lynch;
+    height: 11rem;
+    @include ellipsis(5);
+  }
+
+  &-country,
+  &-rank {
+    width: 2.2rem;
+    height: 2.2rem;
+    flex: 0 0 2.2rem;
+    max-width: 2.2rem;
+    @include centerOriginImage;
+  }
+
+  &-age {
+    font-size: 1.4rem;
+    color: rgba($white, 0.8);
+    column-gap: .8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &-detail {
+    column-gap: 2.8rem;
+
+    &-item {
+      position: relative;
+      column-gap: .4rem;
+      font-size: 1.2rem;
+      color: $white;
+      opacity: 0.8;
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        &::before {
+          position: absolute;
+          left: calc(100% + 1rem);
+          top: 50%;
+          transform: translateY(-50%);
+          height: 1px;
+          width: 1.2rem;
+          background: rgba($white, 0.8);
+          content: '';
+        }
+      }
+
+      .Icon {
+        width: 2rem;
+        height: 2rem;
+        flex: 0 0 2rem;
+        max-width: 2rem;
+      }
+    }
+  }
+
+  &-btn {
+    .Button {
+      .ant-btn {
+        padding: 0;
+      }
+    }
+  }
+}

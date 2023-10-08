@@ -1,0 +1,91 @@
+@import '@/assets/styles/_global.scss';
+
+.Select {
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+    height: 100%;
+  }
+
+  .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector,
+  .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+    border-color: $outer-space;
+  }
+
+
+  .ant-select {
+    width: 100%;
+
+    .ant-select-selector {
+      height: 4.4rem;
+      padding: .4rem 1.2rem;
+      border-radius: .8rem;
+      border: 1px solid $outer-space;
+      background: $shark;
+      box-shadow: none !important;
+      font-size: 1.6rem;
+      color: $white;
+    }
+
+    .ant-select-arrow {
+      right: 1.2rem;
+      height: unset;
+      margin-top: 0;
+      transform: translateY(-50%);
+
+      .Icon {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .ant-select-selection-placeholder {
+      color: $pale-sky;
+    }
+  }
+
+  &-dropdown {
+    border-radius: .8rem;
+    border: 1px solid lighten($outer-space, 5%);
+    background: $shark;
+    overflow: hidden;
+    padding: 0;
+
+    .ant-select-item {
+      font-size: 1.4rem;
+      color: $lynch;
+      padding: .6rem 1.2rem;
+      transition: $common-transition;
+      cursor: pointer;
+      column-gap: .4rem;
+
+      &.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+        background: transparent;
+      }
+
+      &.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+        font-weight: 400;
+        background: $radical-red;
+        color: $white;
+      }
+
+      &:hover {
+        color: $radical-red;
+      }
+
+      &.active {
+        background: $radical-red;
+        color: $white;
+      }
+
+      &-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        @include centerOriginImage;
+
+        .Icon {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+    }
+  }
+}

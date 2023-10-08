@@ -1,0 +1,233 @@
+@import '~antd/dist/antd.css';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+@import './normalize';
+@import './reset';
+@import './fonts';
+@import './colors';
+@import './constants';
+@import './mixins';
+@import './importers';
+
+* {
+  font-family: Inter, sans-serif;
+}
+
+html {
+  font-size: 10px;
+
+  @media (max-width: 1440px) {
+    font-size: 9px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 8px;
+  }
+}
+
+body {
+  --plyr-color-main: #e77986;
+
+  --ck-border-radius: .8rem;
+  --ck-color-color-grid-check-icon: #e77986;
+  --ck-color-base-focus: #e77986;
+  --ck-color-base-active: #e77986;
+  --ck-color-base-active-focus: #e77986;
+  --ck-color-button-on-color: #e77986;
+  --ck-color-link-default: #e77986;
+  --ck-color-focus-border: #e77986;
+  --ck-icon-size: 2rem;
+  --ck-ui-component-min-height: 3rem;
+  --ck-color-base-border: #d6dee6;
+  --ck-color-toolbar-border: #d6dee6;
+
+  --ck-focus-ring: 1px solid var(--ck-color-focus-border);
+  --ck-powered-by-border-color: var(--ck-color-focus-border);
+  --ck-color-resizer: var(--ck-color-focus-border);
+  --ck-color-widget-type-around-button-active: var(--ck-color-focus-border);
+  --ck-clipboard-drop-target-color: var(--ck-color-focus-border);
+  --ck-color-table-column-resizer-hover: var(--ck-color-base-active);
+  --ck-resizer-border-radius: var(--ck-border-radius);
+  --ck-color-list-button-on-background: var(--ck-color-button-on-color);
+  --ck-color-list-button-on-background-focus: var(--ck-color-button-on-color);
+
+  background: $shark;
+
+  .ck-content {
+
+    ol,
+    ul {
+      padding-left: 1.6rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: 600;
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 3.4rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 2.6rem;
+    }
+
+    h4 {
+      font-size: 2.2rem;
+    }
+
+    h5 {
+      font-size: 1.8rem;
+    }
+
+    h6 {
+      font-size: 1.4rem;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    td,
+    li,
+    p {
+      font-size: 1.4rem;
+    }
+
+    hr {
+      height: 2px;
+    }
+  }
+}
+
+.container {
+  max-width: 144rem;
+  padding: 0 1.2rem;
+  margin: 0 auto;
+
+  @media (max-width: 991px) {
+    padding: 0 1.6rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.col-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.pre-line {
+  white-space: pre-line;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+
+.ant-form {
+  .ant-form-item {
+    margin-bottom: 0;
+
+    .ant-form-item-label {
+      padding-bottom: .4rem;
+
+      &>label {
+        font-size: 1.6rem;
+        color: $lynch;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        column-gap: .4rem;
+      }
+    }
+  }
+}

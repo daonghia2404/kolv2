@@ -1,0 +1,32 @@
+@import '@/assets/styles/_global.scss';
+
+.SelectLanguage {
+
+  &-wrapper {
+    column-gap: .8rem;
+    cursor: pointer;
+    height: 3.2rem;
+    padding: .4rem 1.2rem;
+    border-radius: 1.2rem;
+    background: $shark;
+  }
+
+  &-title {
+    font-size: 1.6rem;
+    color: $lynch;
+  }
+
+  &-flag {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include centerOriginImage;
+    margin-left: -.4rem;
+  }
+
+  &-arrow {
+    .Icon {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}

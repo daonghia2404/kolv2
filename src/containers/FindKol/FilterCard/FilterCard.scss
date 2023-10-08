@@ -1,0 +1,53 @@
+@import '@/assets/styles/_global.scss';
+
+.FilterCard {
+  &-header {
+    margin-bottom: 4rem;
+
+    &-layout-btn {
+      opacity: 0.5;
+      transition: $common-transition;
+
+      &:hover,
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-grid {
+    &>.ant-row {
+      @media (max-width: 768px) {
+        margin-left: -0.6rem !important;
+        margin-right: -0.6rem !important;
+        row-gap: 1.2rem !important;
+
+        &>.ant-col {
+          padding-left: 0.6rem !important;
+          padding-right: 0.6rem !important;
+        }
+      }
+    }
+  }
+
+  &-list {
+    &>.ant-row {
+      &>.ant-col {
+        @media (max-width: 1200px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        @media (max-width: 991px) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        @media (max-width: 768px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

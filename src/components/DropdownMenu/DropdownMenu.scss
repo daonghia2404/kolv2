@@ -1,0 +1,41 @@
+@import '@/assets/styles/_global.scss';
+
+.DropdownMenu {
+  &-overlay {
+    border-radius: .8rem;
+    border: 1px solid lighten($outer-space, 5%);
+    background: $shark;
+    overflow: hidden;
+  }
+
+  &-list {
+    &-item {
+      font-size: 1.4rem;
+      color: $lynch;
+      padding: .6rem 1.2rem;
+      transition: $common-transition;
+      cursor: pointer;
+      column-gap: .4rem;
+
+      &:hover {
+        color: $radical-red;
+      }
+
+      &.active {
+        background: $radical-red;
+        color: $white;
+      }
+
+      &-icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        @include centerOriginImage;
+
+        .Icon {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+    }
+  }
+}

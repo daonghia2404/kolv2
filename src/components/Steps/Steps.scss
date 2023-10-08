@@ -1,0 +1,49 @@
+@import '@/assets/styles/_global.scss';
+
+.Steps {
+  &-step {
+    column-gap: .8rem;
+    row-gap: 1.2rem;
+    margin-bottom: 2.4rem;
+
+    &-item {
+      flex: 0 0 4.4rem;
+      max-width: 4.4rem;
+      height: 4.4rem;
+      width: 4.4rem;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      font-weight: 700;
+      background: $heather;
+      color: $white;
+      transition: $common-transition;
+      user-select: none;
+
+      &-line {
+        flex: 0 0 3rem;
+        width: 3rem;
+        max-width: 3rem;
+        height: .5rem;
+        border-radius: 3rem;
+        background: $heather;
+        transition: $common-transition;
+
+        &.active {
+          background: $radical-red;
+        }
+      }
+
+      &:hover {
+        background: darken($heather, 5%);
+      }
+
+      &.active {
+        background: $radical-red;
+
+        &:hover {
+          background: darken($radical-red, 5%);
+        }
+      }
+    }
+  }
+}

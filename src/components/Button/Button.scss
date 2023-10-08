@@ -1,0 +1,125 @@
+@import '@/assets/styles/_global.scss';
+
+.Button {
+  .ant-btn {
+    height: 4.4rem;
+    padding: .4rem 2.4rem;
+    border-radius: .8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 100%;
+
+    &.ant-btn-lg {
+      height: 4.8rem;
+      font-size: 2rem;
+    }
+
+    .Icon {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &.only-icon {
+    .ant-btn {
+      width: 4.4rem;
+      padding: 0;
+    }
+  }
+
+  &-wrapper {
+    column-gap: 1rem;
+  }
+
+  &.RED {
+    .ant-btn {
+      border: none;
+      background: $radical-red;
+      color: $white;
+
+      &:hover {
+        background: darken($radical-red, 10%);
+      }
+    }
+  }
+
+  &.OUTER_SPACE {
+    .ant-btn {
+      border: none;
+      background: $outer-space;
+      color: $lynch;
+
+      &:hover {
+        background: darken($outer-space, 2%);
+      }
+    }
+  }
+
+  &.SHARK {
+    .ant-btn {
+      border: none;
+      background: $shark;
+      color: $pale-sky;
+
+      &:hover {
+        background: darken($shark, 2%);
+      }
+    }
+  }
+
+  &.BLUE {
+    .ant-btn {
+      border: none;
+      background: $dodger-blue;
+      color: $white;
+
+      &:hover {
+        background: darken($dodger-blue, 10%);
+      }
+    }
+  }
+
+  &.OUTLINE_RED {
+    .ant-btn {
+      border: 1px solid $radical-red;
+      background: transparent;
+      color: $radical-red;
+
+      &:hover {
+        background: rgba($radical-red, 0.2);
+      }
+    }
+  }
+
+  &.TEXT_RED {
+    .ant-btn {
+      border: none;
+      background: transparent;
+      color: $radical-red;
+
+      &:hover {
+        color: darken($radical-red, 10%);
+      }
+    }
+  }
+
+  &.TEXT_HEATHER {
+    .ant-btn {
+      border: none;
+      background: transparent;
+      color: $heather;
+
+      &:hover {
+        color: darken($heather, 10%);
+      }
+    }
+  }
+
+  &.TRANSPARENT {
+    .ant-btn {
+      border: none;
+      background: transparent;
+      color: transparent;
+    }
+  }
+}

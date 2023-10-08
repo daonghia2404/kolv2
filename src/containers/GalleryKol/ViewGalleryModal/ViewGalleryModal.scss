@@ -1,0 +1,109 @@
+@import '@/assets/styles/_global.scss';
+
+.ViewGalleryModal {
+  width: 100% !important;
+  user-select: none;
+
+  .ant-modal-content {
+    background: transparent;
+    padding: 0 calc(4.8rem + 3.2rem);
+
+    @media (max-width: 768px) {
+      padding: 0 calc(4.8rem + 1.6rem);
+    }
+
+    .ant-modal-body {
+      padding: 0;
+    }
+  }
+
+  &-wrapper {
+    height: 100vh;
+    row-gap: 2.4rem;
+    padding: 2.4rem 0;
+  }
+
+  &-action {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    &-btn {
+      width: 4.8rem;
+      border-radius: 1.2rem;
+      background: linear-gradient(299deg, #354058 -252.08%, rgba(99, 127, 151, 0.00) 197.48%);
+      transition: $common-transition;
+      opacity: 0.7;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+
+      &.close {
+        height: 4.8rem;
+        border-radius: 50%;
+      }
+
+      &.arrow {
+        height: 23.6rem;
+      }
+    }
+  }
+
+  &-view {
+    @include centerOriginImage;
+    height: calc(100vh - 21.6rem - 2.4rem * 3);
+
+    @media (max-width: 768px) {
+      height: calc(100vh - 16.4rem - 2.4rem * 3);
+    }
+  }
+
+  &-list {
+    .slick-slide {
+      width: 21.6rem;
+      height: 21.6rem;
+      margin-right: 2.4rem;
+
+      @media (max-width: 768px) {
+        width: 16.4rem;
+        height: 16.4rem;
+        margin-right: 1.6rem;
+      }
+
+      &>div {
+        height: 100%;
+
+        &>div {
+          height: 100%;
+        }
+      }
+    }
+
+    &-item {
+      border-radius: 1.6rem;
+      overflow: hidden;
+      @include centerScaleImage;
+      cursor: pointer;
+      background: $black;
+
+      img {
+        opacity: 0.7;
+        transition: $common-transition;
+      }
+
+      &:hover,
+      &.active {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

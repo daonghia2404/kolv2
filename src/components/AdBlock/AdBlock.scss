@@ -1,0 +1,68 @@
+@import '@/assets/styles/_global.scss';
+
+.AdBlock {
+  position: relative;
+  background: $outer-space;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  width: 100%;
+  height: 38.5rem;
+
+
+  &::before {
+    @include fullAbsolute;
+    z-index: 1;
+    border: 4px solid rgba($white, 0.02);
+    content: '';
+    border-radius: 2.4rem;
+    pointer-events: none;
+  }
+
+  &-line {
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    left: 0;
+    z-index: 2;
+    @include centerScaleImage;
+
+    img {
+      position: relative;
+      z-index: 2;
+      filter: blur(4px);
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      z-index: 1;
+      content: '';
+      background: linear-gradient(90deg, rgba(#FAD550, 0.01), #FAD550, rgba(#FAD550, 0.01));
+      filter: blur(1px);
+    }
+
+    &.top {
+      top: 0;
+
+      &::before {
+        top: 0;
+      }
+    }
+
+    &.bottom {
+      bottom: 0;
+
+      &::before {
+        bottom: 0;
+      }
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    @include centerScaleImage;
+  }
+}

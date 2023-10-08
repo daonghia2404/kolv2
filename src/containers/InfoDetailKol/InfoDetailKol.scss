@@ -1,0 +1,71 @@
+@import '@/assets/styles/_global.scss';
+
+.InfoDetailKol {
+  border-radius: 2.4rem;
+  overflow: hidden;
+  background: rgba($outer-space, 0.6);
+
+  .ant-rate {
+    margin-top: -.2rem;
+    font-size: 2.2rem;
+    color: $radical-red;
+
+    .ant-rate-star:not(:last-child) {
+      margin-right: .4rem;
+    }
+  }
+
+  &-header {
+    background: $outer-space;
+    padding: 2.4rem;
+  }
+
+
+  &-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    color: $white;
+    font-weight: 600;
+    column-gap: .8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &-description {
+    font-size: 1.4rem;
+    color: $lynch;
+    column-gap: .8rem;
+  }
+
+  &-rank {
+    width: 3.2rem;
+    height: 3.2rem;
+    flex: 0 0 3.2rem;
+    max-width: 3.2rem;
+    @include centerOriginImage;
+  }
+
+  &-body {
+    padding: 2.4rem;
+
+    &-item {
+      column-gap: .8rem;
+      font-size: 1.4rem;
+      color: $heather;
+
+      .Icon {
+        flex: 0 0 1.6rem;
+        max-width: 1.6rem;
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import '@/assets/styles/_global.scss';
+
+.Header {
+  padding: 4.8rem 0;
+
+  &-wrapper {
+    padding: 1.2rem;
+    margin: 0 -1.2rem;
+    border-radius: 1.2rem;
+    background: linear-gradient(270deg, #354058 -429.6%, rgba(99, 127, 151, 0.00) 100%);
+    backdrop-filter: blur(1.2rem);
+  }
+
+  &-logo {
+    width: 17.6rem;
+    height: 4.8rem;
+    @include centerOriginImage;
+  }
+
+  &-list {
+    column-gap: 4.8rem;
+
+    &-item {
+      color: $lynch;
+      font-size: 1.6rem;
+      font-weight: 600;
+
+      &:hover,
+      &.active {
+        color: $radical-red;
+      }
+
+      a {
+        color: inherit;
+        display: block;
+      }
+    }
+  }
+
+  .Input {
+    width: 18rem;
+  }
+
+  &-account {
+    column-gap: 1.2rem;
+    cursor: pointer;
+
+    &-info {
+      &-title {
+        font-size: 1.6rem;
+        color: $white;
+        font-weight: 600;
+        column-gap: .8rem;
+      }
+
+      &-description {
+        font-size: 1.2rem;
+        color: $lynch;
+      }
+
+      &-rank {
+        width: 1.8rem;
+        height: 1.8rem;
+        flex: 0 0 1.8rem;
+        max-width: 1.8rem;
+        @include centerOriginImage;
+      }
+
+      &-arrow {
+        margin-left: 0.4rem;
+
+        .Icon {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+      }
+    }
+  }
+
+  &-subtitle {
+    column-gap: 2.4rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: $white;
+  }
+}

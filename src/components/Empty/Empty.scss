@@ -1,0 +1,13 @@
+@import '@/assets/styles/_global.scss';
+
+.Empty {
+  padding: 1.2rem;
+  font-size: 1.4rem;
+  color: $white;
+  row-gap: 0.8rem;
+
+  .Icon {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}

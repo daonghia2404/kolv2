@@ -1,0 +1,37 @@
+@import '@/assets/styles/_global.scss';
+
+.Checkbox {
+  &.small {
+    .ant-checkbox-inner {
+      width: 1.6rem;
+      height: 1.6rem;
+
+      &::after {
+        left: 16%;
+      }
+    }
+  }
+
+  .ant-checkbox {
+    &.ant-checkbox-checked {
+      .ant-checkbox-inner {
+        background: $radical-red;
+        border-color: $radical-red;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .ant-checkbox-inner {
+      border-radius: .4rem;
+      border: 1px solid $outer-space;
+      background: $shark;
+
+      &::after {
+        border-color: $outer-space;
+      }
+    }
+  }
+}

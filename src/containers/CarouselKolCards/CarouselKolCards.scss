@@ -1,0 +1,33 @@
+@import '@/assets/styles/_global.scss';
+
+.CarouselKolCards {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+
+  @media (max-width: 1600px) {
+    padding-left: calc(4.8rem + 3rem);
+    padding-right: calc(4.8rem + 3rem);
+  }
+
+  @media (max-width: 991px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &-title {
+    text-align: center;
+    font-size: 3.6rem;
+    font-family: 'Poppins', sans-serif;
+    color: $white;
+    margin-bottom: 3.2rem;
+    font-weight: 600;
+  }
+
+  .slick-list {
+    margin: 0 -1.2rem;
+  }
+
+  &-item {
+    padding: 0 1.2rem;
+  }
+}

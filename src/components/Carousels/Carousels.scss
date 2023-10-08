@@ -1,0 +1,48 @@
+@import '@/assets/styles/_global.scss';
+
+.Carousels {
+  .slick-arrow {
+    width: unset;
+    height: unset;
+    opacity: 0.7;
+    transition: $common-transition;
+
+    @media (max-width: 991px) {
+      display: none !important;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::before {
+      display: none !important;
+    }
+
+    &.slick-prev {
+      left: -3rem;
+      transform: translate(-100%, -50%);
+
+      .ant-btn {
+        background: linear-gradient(90deg, lighten(#354058, 10%) -429.6%, rgba(99, 127, 151, 0.00) 100%);
+      }
+    }
+
+    &.slick-next {
+      right: -3rem;
+      transform: translate(100%, -50%);
+
+      .ant-btn {
+        background: linear-gradient(270deg, lighten(#354058, 10%) -429.6%, rgba(99, 127, 151, 0.00) 100%);
+      }
+    }
+
+    .ant-btn {
+      width: 4.8rem;
+      height: 23.6rem;
+      padding: 1.2rem;
+      border: none;
+      border-radius: 1.2rem;
+    }
+  }
+}

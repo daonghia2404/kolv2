@@ -1,0 +1,69 @@
+@import '@/assets/styles/_global.scss';
+
+.AuthLayout {
+  &-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &-body {
+    padding-top: 16.8rem;
+
+    &-wrapper {
+      position: relative;
+      min-height: calc(100vh - 16.8rem);
+
+      &::before {
+        @include fullAbsolute;
+        content: '';
+        background: url('../../assets/images/bg-auth-layout.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        mix-blend-mode: overlay;
+
+        @media (max-width: 768px) {
+          background-size: cover;
+        }
+      }
+
+      &>div {
+        position: relative;
+        z-index: 1;
+        margin-top: 6.4rem;
+      }
+    }
+  }
+
+  &-card {
+    padding: 6.4rem;
+    background: $outer-space;
+    border-radius: 2.4rem;
+    box-shadow: 0px 12px 24px 0px rgba(38, 38, 38, 0.50);
+
+    @media (max-width: 768px) {
+      padding: 3.2rem;
+    }
+
+    &-header {
+      margin-bottom: 2.4rem;
+    }
+
+    &-title {
+      font-size: 3.6rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: $white;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+
+    &-description {
+      font-size: 1.8rem;
+      color: $heather;
+    }
+  }
+}

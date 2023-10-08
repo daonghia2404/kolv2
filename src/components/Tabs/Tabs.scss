@@ -1,0 +1,48 @@
+@import '@/assets/styles/_global.scss';
+
+.Tabs {
+
+  .ant-tabs-top>.ant-tabs-nav .ant-tabs-ink-bar,
+  .ant-tabs-top>div>.ant-tabs-nav .ant-tabs-ink-bar {
+    top: 0;
+    bottom: unset;
+    height: .2rem;
+    background: $radical-red;
+    border-radius: 0 0 .4rem .4rem;
+  }
+
+  .ant-tabs {
+    .ant-tabs-nav {
+      &::before {
+        top: 0;
+        bottom: unset;
+        border-color: $lynch;
+      }
+    }
+
+    .ant-tabs-tab {
+      padding: .4rem 1.6rem;
+      height: 5.2rem;
+      font-size: 1.4rem;
+      color: $lynch;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+
+      &:hover {
+        color: $radical-red;
+      }
+
+      &+.ant-tabs-tab {
+        margin: 0;
+      }
+
+      &.ant-tabs-tab-active {
+        background: linear-gradient(180deg, #FF1B6D -467.28%, rgba(255, 27, 109, 0.00) 100%);
+
+        .ant-tabs-tab-btn {
+          color: $white;
+        }
+      }
+    }
+  }
+}

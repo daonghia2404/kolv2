@@ -1,0 +1,136 @@
+import IconRankV from '@/assets/icons/icon-rank-v.svg';
+import IconFlagJp from '@/assets/icons/icon-flag-jp.svg';
+
+import ImageModel1 from '@/assets/images/image-model-1.png';
+import ImageModel2 from '@/assets/images/image-model-2.png';
+import ImageModel3 from '@/assets/images/image-model-3.png';
+import ImageModel4 from '@/assets/images/image-model-4.png';
+import ImageModel5 from '@/assets/images/image-model-5.png';
+import ImageModel6 from '@/assets/images/image-model-6.png';
+import ImageModel7 from '@/assets/images/image-model-7.png';
+import ImageModel8 from '@/assets/images/image-model-8.png';
+import ImageModel9 from '@/assets/images/image-model-9.png';
+import ImageModel10 from '@/assets/images/image-model-10.png';
+
+export const dataCarouselKolCards = [
+  {
+    id: '1',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel1,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '2',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel2,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '3',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel3,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '4',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel4,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '5',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel5,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '6',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel6,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '7',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel7,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '8',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel8,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '9',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel9,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '10',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel10,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+];

@@ -1,0 +1,59 @@
+@import '@/assets/styles/_global.scss';
+
+.Input {
+
+  .ant-input-affix-wrapper:focus,
+  .ant-input-affix-wrapper-focused,
+  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: $outer-space;
+  }
+
+  .ant-input-affix-wrapper {
+    height: 4.4rem;
+    padding: .4rem 1.2rem;
+    border-radius: .8rem;
+    border: 1px solid $outer-space;
+    background: $shark;
+    box-shadow: none;
+
+    .ant-input {
+      padding: 0;
+      background: transparent;
+      border: none;
+      height: unset;
+    }
+  }
+
+  .ant-input-prefix {
+    margin-right: .8rem;
+  }
+
+  .ant-input-suffix {
+    margin-left: .8rem;
+  }
+
+  .ant-input-prefix,
+  .ant-input-suffix {
+    font-size: 1.6rem;
+    color: $lynch;
+
+    .Icon {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  .ant-input {
+    font-size: 1.6rem;
+    color: $white;
+    border: 1px solid $outer-space;
+    height: 4.4rem;
+    background: $shark;
+    border-radius: .8rem;
+    box-shadow: none;
+
+    &::placeholder {
+      color: $pale-sky;
+    }
+  }
+}

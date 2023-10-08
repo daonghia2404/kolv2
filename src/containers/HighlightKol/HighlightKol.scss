@@ -1,0 +1,166 @@
+@import '@/assets/styles/_global.scss';
+
+.HighlightKol {
+  position: relative;
+  background: $outer-space;
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  margin: 2.4rem 0;
+
+  &::before {
+    @include fullAbsolute;
+    z-index: 1;
+    border: 4px solid rgba($white, 0.02);
+    content: '';
+    border-radius: 2.4rem;
+    pointer-events: none;
+  }
+
+  &-wrapper {
+    &>.ant-row {
+      @media (max-width: 991px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+
+  &-images {
+    @media (max-width: 991px) {
+      padding-top: calc(3.2rem + 1.6rem);
+    }
+
+    &-item {
+      border-radius: 1rem;
+      border: 1.5px solid rgba($white, 0.5);
+      width: 14.4rem;
+      max-width: 14.4rem;
+      flex: 0 0 14.4rem;
+      height: 25.6rem;
+      overflow: hidden;
+      @include centerScaleImage;
+      transform: scale(0.85);
+
+      @media (max-width: 575px) {
+        width: calc(100% / 3);
+        max-width: calc(100% / 3);
+        flex: 0 0 calc(100% / 3);
+      }
+
+      &:nth-child(2) {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-line {
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    left: 0;
+    z-index: 2;
+    @include centerScaleImage;
+
+    img {
+      position: relative;
+      z-index: 2;
+      filter: blur(4px);
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      z-index: 1;
+      content: '';
+      background: linear-gradient(90deg, rgba(#FAD550, 0.01), #FAD550, rgba(#FAD550, 0.01));
+      filter: blur(1px);
+    }
+
+    &.top {
+      top: 0;
+
+      &::before {
+        top: 0;
+      }
+    }
+
+    &.bottom {
+      bottom: 0;
+
+      &::before {
+        bottom: 0;
+      }
+    }
+  }
+
+  &-info {
+    &-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.4rem;
+      color: $white;
+      column-gap: .8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    &-rank {
+      width: 2.4rem;
+      height: 2.4rem;
+      flex: 0 0 2.4rem;
+      max-width: 2.4rem;
+      @include centerOriginImage;
+    }
+
+    &-detail {
+      margin-bottom: 1.6rem;
+
+      &-item {
+        font-size: 1.4rem;
+        color: $heather;
+        column-gap: .8rem;
+
+        &-icon {
+          width: 2.2rem;
+          height: 2.2rem;
+          flex: 0 0 2.2rem;
+          max-width: 2.2rem;
+          @include centerOriginImage;
+
+          .Icon {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    &-description {
+      font-size: 1.6rem;
+      color: $heather;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &-sponsored {
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    column-gap: 1.2rem;
+    font-size: 1.6rem;
+    color: $heather;
+    padding: .8rem 2.4rem;
+
+    @media (max-width: 991px) {
+      padding: 0;
+    }
+
+    .Icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      flex: 0 0 2.4rem;
+      max-width: 2.4rem;
+    }
+  }
+}
