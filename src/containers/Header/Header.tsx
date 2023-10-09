@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'antd';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,7 +16,7 @@ import ImageAvatar from '@/assets/images/image-avatar.png';
 import IconRankV from '@/assets/icons/icon-rank-v.svg';
 import Avatar from '@/components/Avatar';
 import DrawerMenuMobile from '@/containers/Header/DrawerMenuMobile';
-import { useModalState } from '@/utils/hooks';
+import { useModalState, useTrans } from '@/utils/hooks';
 
 import { THeaderProps } from './Header.types.d';
 import { dataHeaderChildPageMenu, dataHeaderMenu } from './Header.data';
@@ -28,10 +28,15 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 const Header: React.FC<THeaderProps> = () => {
   const router = useRouter();
   const { asPath } = router;
+
+  const trans = useTrans();
+
   const [isLogged, setIsLogged] = useState<boolean>(false);
   const [drawerMenuMobileState, handleOpenDrawerMenuMobile, handleCloseDrawerMenuMobile] = useModalState();
+  const [isScrollBelowHeader, setIsScrollBelowHeader] = useState<boolean>(false);
 
   const dataLocation = {
+    trans,
     id: router?.query?.id,
   };
 
@@ -42,8 +47,22 @@ const Header: React.FC<THeaderProps> = () => {
   const isLoginPage = isAuthPage && (detailPage?.id as string) === 'login';
   const isSignUpPage = isAuthPage && (detailPage?.id as string) === 'sign-up';
 
+  const triggerScrollToHeaderHeight = (): void => {
+    window.addEventListener('scroll', (e) => {
+      if (window.scrollY > 50) {
+        setIsScrollBelowHeader(true);
+      } else {
+        setIsScrollBelowHeader(false);
+      }
+    });
+  };
+
+  useEffect(() => {
+    triggerScrollToHeaderHeight();
+  }, []);
+
   return (
-    <header className="Header">
+    <header className={classNames('Header', { small: isScrollBelowHeader })}>
       <div className="container">
         <div className="Header-wrapper">
           <Row align="middle" justify="space-between" wrap={false}>
@@ -75,7 +94,7 @@ const Header: React.FC<THeaderProps> = () => {
                 <MediaQuery minWidth={992}>
                   <Col>
                     <ul className="Header-list flex items-center">
-                      {dataHeaderMenu.map((item) => (
+                      {dataHeaderMenu(dataLocation).map((item) => (
                         <li
                           key={item.id}
                           className={classNames('Header-list-item', {
@@ -108,7 +127,7 @@ const Header: React.FC<THeaderProps> = () => {
                                 <Image src={IconRankV} alt="" />
                               </div>
                             </div>
-                            <div className="Header-account-info-description">Role</div>
+                            <div className="Header-account-info-description">{trans?.header?.role}</div>
                           </div>
                           <div className="Header-account-arrow">
                             <Icon name={EIconName.CaretDown} color={EIconColor.LYNCH} />
@@ -120,6 +139,7 @@ const Header: React.FC<THeaderProps> = () => {
                           styleType={EButtonStyleType.OUTLINE_RED}
                           iconName={EIconName.Logout}
                           iconColor={EIconColor.RADICAL_RED}
+                          onClick={(): void => setIsLogged(false)}
                         />
                       </Col>
                     </>
@@ -129,14 +149,14 @@ const Header: React.FC<THeaderProps> = () => {
                         <>
                           <Col>
                             <Input
-                              placeholder="Username"
+                              placeholder={trans?.header?.username}
                               prefix={<Icon name={EIconName.UserKey} color={EIconColor.PALE_SKY} />}
                             />
                           </Col>
                           <Col>
                             <Input
                               type="password"
-                              placeholder="Password"
+                              placeholder={trans?.header?.password}
                               showVisiblePassword={false}
                               prefix={<Icon name={EIconName.Lock} color={EIconColor.PALE_SKY} />}
                             />
@@ -144,7 +164,7 @@ const Header: React.FC<THeaderProps> = () => {
 
                           <Col>
                             <Button
-                              title="Login"
+                              title={trans?.header?.login}
                               styleType={EButtonStyleType.RED}
                               iconName={EIconName.Unlock}
                               iconColor={EIconColor.WHITE}
@@ -153,14 +173,14 @@ const Header: React.FC<THeaderProps> = () => {
                             />
                           </Col>
                           <Col>
-                            <Button title="Signup" styleType={EButtonStyleType.OUTLINE_RED} link={Paths.SignUp} />
+                            <Button title={trans?.header?.signup} styleType={EButtonStyleType.OUTLINE_RED} link={Paths.SignUp} />
                           </Col>
                         </>
                       )}
 
                       {isSignUpPage && (
                         <Button
-                          title="Login"
+                          title={trans?.header?.login}
                           styleType={EButtonStyleType.OUTLINE_RED}
                           iconName={EIconName.Unlock}
                           iconColor={EIconColor.RADICAL_RED}
@@ -170,7 +190,7 @@ const Header: React.FC<THeaderProps> = () => {
                       )}
 
                       {isLoginPage && (
-                        <Button title="Signup" styleType={EButtonStyleType.OUTLINE_RED} link={Paths.SignUp} />
+                        <Button title={trans?.header?.signup} styleType={EButtonStyleType.OUTLINE_RED} link={Paths.SignUp} />
                       )}
                     </>
                   )}
@@ -193,7 +213,14 @@ const Header: React.FC<THeaderProps> = () => {
       </div>
 
       <MediaQuery maxWidth={991}>
-        <DrawerMenuMobile isLogged={isLogged} {...drawerMenuMobileState} onClose={handleCloseDrawerMenuMobile} />
+        <DrawerMenuMobile
+          isLogged={isLogged}
+          dataLocation={dataLocation}
+          {...drawerMenuMobileState}
+          onClose={handleCloseDrawerMenuMobile}
+          onLogout={(): void => setIsLogged(false)}
+          onLogin={(): void => setIsLogged(true)}
+        />
       </MediaQuery>
     </header>
   );

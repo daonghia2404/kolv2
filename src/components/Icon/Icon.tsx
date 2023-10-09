@@ -52,6 +52,7 @@ import PencilSquare from './PencilSquare';
 import Map from './Map';
 import DatabaseOff from './DatabaseOff';
 import Calendar from './Calendar';
+import Upload from './Upload';
 
 const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) => {
   const renderIcon = (): React.ReactElement => {
@@ -152,6 +153,8 @@ const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) 
         return <DatabaseOff color={color} />;
       case EIconName.Calendar:
         return <Calendar color={color} />;
+      case EIconName.Upload:
+        return <Upload color={color} />;
 
       default:
         return <></>;

@@ -1,19 +1,19 @@
-export const dataFooterMenu = [
+export const dataFooterMenu = (data?: any) => [
   {
     id: 'become-an-influencer',
-    title: 'Become an Influencer',
+    title: data?.trans?.footer?.becomeAnInfluencer,
     link: '',
     activePaths: [],
   },
   {
     id: 'faq',
-    title: 'FAQ',
+    title: data?.trans?.footer?.faq,
     link: '',
     activePaths: [],
   },
   {
     id: 'support',
-    title: 'Support',
+    title: data?.trans?.footer?.support,
     link: '',
     activePaths: [],
   },

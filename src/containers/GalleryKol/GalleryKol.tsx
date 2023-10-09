@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Col, Row } from 'antd';
 import Slider from 'react-slick';
 import Image from 'next/image';
+import classNames from 'classnames';
 
 import ImageKolGallery1 from '@/assets/images/image-kol-gallery-1.png';
 import ImageKolGallery2 from '@/assets/images/image-kol-gallery-2.png';
@@ -14,8 +15,13 @@ import ViewGalleryModal from '@/containers/GalleryKol/ViewGalleryModal';
 import { useModalState } from '@/utils/hooks';
 
 import { TGalleryKolProps } from './GalleryKol.types.d';
+import { EGalleryKolView } from './GalleryKol.enums';
 
-const GalleryKol: React.FC<TGalleryKolProps> = () => {
+const GalleryKol: React.FC<TGalleryKolProps> = ({ view }) => {
+  const isViewReview = view === EGalleryKolView.REVIEW;
+  const isViewDetail = view === EGalleryKolView.DETAIL;
+  const maxLimitImage = isViewReview ? 3 : 4;
+
   const [carouselRef, setCarouselRef] = useState<Slider>();
   const [currentIndexSlide, setCurrentIndexSlide] = useState<number>(0);
 
@@ -32,69 +38,77 @@ const GalleryKol: React.FC<TGalleryKolProps> = () => {
     ImageKolGallery3,
   ];
 
-  const limitGalleryList = dataCarousel.slice(0, 4);
+  const limitGalleryList = dataCarousel.slice(0, maxLimitImage);
   const moreGalleryItem = dataCarousel.length - limitGalleryList.length;
 
   return (
     <div className="GalleryKol">
       <div className="GalleryKol-wrapper flex flex-col">
-        <div className="GalleryKol-carousel">
-          <Carousels
-            infinite={false}
-            arrows={false}
-            dots={false}
-            slidesToShow={1}
-            onInit={setCarouselRef}
-            onBeforeChange={(oldIndex, newIndex): void => setCurrentIndexSlide(newIndex)}
-          >
-            {dataCarousel.map((item, index) => (
-              <div key={index} className="GalleryKol-carousel-item">
-                <Image src={item} alt="" />
+        {isViewDetail && (
+          <div className="GalleryKol-carousel">
+            <Carousels
+              infinite={false}
+              arrows={false}
+              dots={false}
+              slidesToShow={1}
+              onInit={setCarouselRef}
+              onBeforeChange={(oldIndex, newIndex): void => setCurrentIndexSlide(newIndex)}
+            >
+              {dataCarousel.map((item, index) => (
+                <div key={index} className="GalleryKol-carousel-item">
+                  <Image src={item} alt="" />
+                </div>
+              ))}
+            </Carousels>
+            <div className="GalleryKol-carousel-action flex items-center justify-center">
+              <Button
+                iconName={EIconName.ArrowLeftShort}
+                iconColor={EIconColor.OSLO_GRAY}
+                styleType={EButtonStyleType.TRANSPARENT}
+                onClick={(): void => {
+                  carouselRef?.slickPrev?.();
+                }}
+              />
+              <div className="GalleryKol-carousel-action-title">
+                {addZeroIfLessThanTen(currentIndexSlide + 1)}/{addZeroIfLessThanTen(dataCarousel.length)}
               </div>
-            ))}
-          </Carousels>
-          <div className="GalleryKol-carousel-action flex items-center justify-center">
-            <Button
-              iconName={EIconName.ArrowLeftShort}
-              iconColor={EIconColor.OSLO_GRAY}
-              styleType={EButtonStyleType.TRANSPARENT}
-              onClick={(): void => {
-                carouselRef?.slickPrev?.();
-              }}
-            />
-            <div className="GalleryKol-carousel-action-title">
-              {addZeroIfLessThanTen(currentIndexSlide + 1)}/{addZeroIfLessThanTen(dataCarousel.length)}
+              <Button
+                iconName={EIconName.ArrowRightShort}
+                iconColor={EIconColor.OSLO_GRAY}
+                styleType={EButtonStyleType.TRANSPARENT}
+                onClick={(): void => {
+                  carouselRef?.slickNext?.();
+                }}
+              />
+              <Button
+                iconName={EIconName.ZoomIn}
+                iconColor={EIconColor.OSLO_GRAY}
+                styleType={EButtonStyleType.TRANSPARENT}
+                onClick={(): void => handleOpenViewGalleryModal(undefined, { defaultIndex: currentIndexSlide })}
+              />
             </div>
-            <Button
-              iconName={EIconName.ArrowRightShort}
-              iconColor={EIconColor.OSLO_GRAY}
-              styleType={EButtonStyleType.TRANSPARENT}
-              onClick={(): void => {
-                carouselRef?.slickNext?.();
-              }}
-            />
-            <Button
-              iconName={EIconName.ZoomIn}
-              iconColor={EIconColor.OSLO_GRAY}
-              styleType={EButtonStyleType.TRANSPARENT}
-              onClick={(): void => handleOpenViewGalleryModal(undefined, { defaultIndex: currentIndexSlide })}
-            />
           </div>
-        </div>
+        )}
+
         <div className="GalleryKol-list">
           <Row gutter={[24, 24]}>
             {limitGalleryList.map((item, index) => {
-              const isMoreItem = index === 3 && moreGalleryItem > 0;
+              const isMoreItem = index === maxLimitImage - 1 && moreGalleryItem > 0;
 
               return (
-                <Col key={index} span={6}>
+                <Col key={index} span={isViewReview ? 8 : 6}>
                   <div
-                    className="GalleryKol-list-item"
+                    className={classNames('GalleryKol-list-item', { review: isViewReview, detail: isViewDetail })}
                     onClick={(): void => handleOpenViewGalleryModal(undefined, { defaultIndex: index })}
                   >
                     <Image src={item} alt="" />
                     {isMoreItem && (
-                      <div className="GalleryKol-list-item-overlay flex items-center justify-center nowrap">
+                      <div
+                        className={classNames('GalleryKol-list-item-overlay flex items-center justify-center nowrap', {
+                          review: isViewReview,
+                          detail: isViewDetail,
+                        })}
+                      >
                         +{moreGalleryItem} Photos
                       </div>
                     )}

@@ -1,21 +1,21 @@
 import { Paths } from '@/routers/constants';
 
-export const dataHeaderMenu = [
+export const dataHeaderMenu = (data: any) => [
   {
     id: 'home',
-    title: 'Home',
+    title: data?.trans?.header?.home,
     link: Paths.Home,
     activePaths: [Paths.Home],
   },
   {
     id: 'faq',
-    title: 'FAQ',
+    title: data?.trans?.header?.faq,
     link: '',
     activePaths: [],
   },
   {
     id: 'support',
-    title: 'Support',
+    title: data?.trans?.header?.support,
     link: '',
     activePaths: [],
   },
@@ -24,19 +24,19 @@ export const dataHeaderMenu = [
 export const dataHeaderChildPageMenu = (data: any) => [
   {
     id: 'profile-detail',
-    title: 'Profile',
+    title: data?.trans?.header?.profile,
     activePaths: [Paths.ProfileDetail(data?.id)],
     backPath: Paths.Home,
   },
   {
     id: 'login',
-    title: 'Login',
+    title: data?.trans?.header?.login,
     activePaths: [Paths.Login],
     backPath: Paths.Home,
   },
   {
     id: 'sign-up',
-    title: 'Sign Up',
+    title: data?.trans?.header?.signup,
     activePaths: [Paths.SignUp],
     backPath: Paths.Home,
   },

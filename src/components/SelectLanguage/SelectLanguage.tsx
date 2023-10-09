@@ -1,43 +1,53 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import DropdownMenu, { TDropdownMenuItem } from '@/components/DropdownMenu';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
-import FlagJp from '@/assets/icons/icon-flag-jp.svg';
+import FlagGm from '@/assets/icons/icon-flag-germany.png';
 import FlagEn from '@/assets/icons/icon-flag-en.svg';
+import { ELocale } from '@/common/enums';
 
 import { TSelectLanguageProps } from './SelectLanguage.types.d';
 
 const SelectLanguage: React.FC<TSelectLanguageProps> = () => {
-  const [stateValue, setStateValue] = useState<TDropdownMenuItem>({
-    label: 'English',
-    value: 'en',
-    iconImage: FlagEn,
-  });
+  const router = useRouter();
+  const { locale } = router;
+
+  const changeLanguge = (lang: string) => {
+    router.push(router.asPath, router.asPath, { locale: lang });
+  };
 
   const dataLanguageOptions = [
     {
       label: 'English',
-      value: 'en',
+      value: ELocale.EN,
       iconImage: FlagEn,
-      active: stateValue?.value === 'en',
+      active: locale === ELocale.EN,
     },
     {
-      label: '日本',
-      value: 'jp',
-      iconImage: FlagJp,
-      active: stateValue?.value === 'jp',
+      label: 'Deutsch',
+      value: ELocale.DE,
+      iconImage: FlagGm,
+      active: locale === ELocale.DE,
     },
   ];
 
+  const activeLanguage = dataLanguageOptions.find((option) => option.value === locale);
+
   return (
     <div className="SelectLanguage">
-      <DropdownMenu options={dataLanguageOptions} onClickMenuItem={setStateValue}>
+      <DropdownMenu
+        options={dataLanguageOptions}
+        onClickMenuItem={(option): void => {
+          changeLanguge(option.value);
+        }}
+      >
         <div className="SelectLanguage-wrapper flex items-center">
-          <div className="SelectLanguage-title">{stateValue.label}</div>
-          {stateValue.iconImage && (
+          <div className="SelectLanguage-title">{activeLanguage?.label}</div>
+          {activeLanguage?.iconImage && (
             <div className="SelectLanguage-flag">
-              <Image src={stateValue.iconImage} alt="" />
+              <Image src={activeLanguage?.iconImage} alt="" />
             </div>
           )}
 

@@ -1,0 +1,85 @@
+@import '@/assets/styles/_global.scss';
+
+.DragDropImages {
+  .ant-upload.ant-upload-drag {
+    border: 2px dashed $heather;
+    border-radius: 1.2rem;
+    background: transparent;
+    transition: $common-transition;
+
+    .ant-upload {
+      padding: 5.6rem;
+    }
+  }
+
+  .ant-upload.ant-upload-drag:not(.ant-upload-disabled).ant-upload-drag-hover,
+  .ant-upload.ant-upload-drag:not(.ant-upload-disabled):hover {
+    border-color: $radical-red;
+    background: rgba($radical-red, 0.1);
+  }
+
+  &-wrapper {
+    max-width: 29rem;
+    margin: auto;
+  }
+
+  &-icon {
+    width: fit-content;
+    margin: auto;
+
+    .Icon {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+  }
+
+  &-title {
+    font-size: 1.8rem;
+    color: $heather;
+    text-align: center;
+    margin: 2.4rem 0 1.2rem;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+    color: $lynch;
+    text-align: center;
+  }
+
+  &-list {
+    margin-bottom: 3.2rem;
+
+    &-item {
+      position: relative;
+      border: 1px solid rgba($white, 0.2);
+      border-radius: 1.2rem;
+      @include centerScaleImage;
+
+      &:not(.single) {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      img {
+        border-radius: 1.2rem;
+      }
+
+      &-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        cursor: pointer;
+        background: $radical-red;
+        border-radius: 50%;
+        display: flex;
+
+        .Icon {
+          width: 2.4rem;
+          height: 2.4rem;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

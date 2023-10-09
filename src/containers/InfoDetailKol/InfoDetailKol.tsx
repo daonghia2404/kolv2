@@ -28,7 +28,7 @@ const InfoDetailKol: React.FC<TInfoDetailKolProps> = () => {
           </div>
         </div>
         <div className="InfoDetailKol-body">
-          <div className="InfoDetailKol-body-item flex items-center">
+          <div className="InfoDetailKol-body-item flex items-center flex-wrap">
             <Icon name={EIconName.PlusCircle} color={EIconColor.HEATHER} />
             <strong>h:</strong> 169cm
             <span style={{ opacity: 0.4 }}>{` ------ `}</span>

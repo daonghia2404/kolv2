@@ -43,6 +43,18 @@
     }
   }
 
+  &.LIMED_SPRUCE {
+    .ant-btn {
+      border: 1px solid rgba($white, 0.2);
+      background: $limed-spruce;
+      color: $white;
+
+      &:hover {
+        background: darken($limed-spruce, 5%);
+      }
+    }
+  }
+
   &.OUTER_SPACE {
     .ant-btn {
       border: none;

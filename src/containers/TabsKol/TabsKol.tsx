@@ -10,12 +10,12 @@ const TabsKol: React.FC<TTabsKolProps> = () => {
     {
       key: 'about',
       title: 'About',
-      children: <TableSchedules />,
+      children: <></>,
     },
     {
       key: 'services',
       title: 'Services',
-      children: <TableSchedules />,
+      children: <></>,
     },
     {
       key: 'schedule',
@@ -25,7 +25,7 @@ const TabsKol: React.FC<TTabsKolProps> = () => {
     {
       key: 'price',
       title: 'Price',
-      children: <TableSchedules />,
+      children: <></>,
     },
   ];
 

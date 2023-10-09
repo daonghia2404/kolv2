@@ -5,8 +5,11 @@ import GuestLayout from '@/layouts/GuestLayout';
 import CarouselKolCards from '@/containers/CarouselKolCards';
 import HighlightKol from '@/containers/HighlightKol';
 import FindKol from '@/containers/FindKol';
+import { useRouter } from 'next/router';
 
 const Home = () => {
+  const router = useRouter();
+
   return (
     <div className="Home">
       <div className="container">

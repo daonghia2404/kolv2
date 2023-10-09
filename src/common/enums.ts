@@ -152,3 +152,8 @@ export enum EResultType {
   WEAK = 'WEAK',
   POOR = 'POOR',
 }
+
+export enum ELocale {
+  EN = 'en',
+  DE = 'de',
+}

@@ -13,12 +13,22 @@ import IconRankV from '@/assets/icons/icon-rank-v.svg';
 import Avatar from '@/components/Avatar';
 import Button, { EButtonStyleType } from '@/components/Button';
 import Input from '@/components/Input';
+import { Paths } from '@/routers/constants';
+import { useTrans } from '@/utils/hooks';
 
 import { TDrawerMenuMobileProps } from './DrawerMenuMobile.types';
 
 const DrawerModify: React.FC<DrawerProps & { children?: React.ReactNode }> = Drawer;
 
-const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({ isLogged, visible, onClose }) => {
+const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({
+  isLogged,
+  dataLocation,
+  visible,
+  onLogin,
+  onLogout,
+  onClose,
+}) => {
+  const trans = useTrans();
   const { asPath } = useRouter();
 
   return (
@@ -31,7 +41,7 @@ const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({ isLogged, visible,
     >
       <div className="DrawerMenuMobile-wrapper">
         <ul className="Header-list">
-          {dataHeaderMenu.map((item) => (
+          {dataHeaderMenu(dataLocation).map((item) => (
             <li
               key={item.id}
               className={classNames('Header-list-item', {
@@ -62,7 +72,7 @@ const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({ isLogged, visible,
                         <Image src={IconRankV} alt="" />
                       </div>
                     </div>
-                    <div className="Header-account-info-description">Role</div>
+                    <div className="Header-account-info-description">{trans?.header?.role}</div>
                   </div>
                   <div className="Header-account-arrow">
                     <Icon name={EIconName.CaretDown} color={EIconColor.LYNCH} />
@@ -74,18 +84,19 @@ const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({ isLogged, visible,
                   styleType={EButtonStyleType.OUTLINE_RED}
                   iconName={EIconName.Logout}
                   iconColor={EIconColor.RADICAL_RED}
+                  onClick={onLogout}
                 />
               </Col>
             </>
           ) : (
             <>
               <Col span={24}>
-                <Input placeholder="Username" prefix={<Icon name={EIconName.UserKey} color={EIconColor.PALE_SKY} />} />
+                <Input placeholder={trans?.header?.username} prefix={<Icon name={EIconName.UserKey} color={EIconColor.PALE_SKY} />} />
               </Col>
               <Col span={24}>
                 <Input
                   type="password"
-                  placeholder="Password"
+                  placeholder={trans?.header?.password}
                   showVisiblePassword={false}
                   prefix={<Icon name={EIconName.Lock} color={EIconColor.PALE_SKY} />}
                 />
@@ -93,15 +104,16 @@ const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({ isLogged, visible,
 
               <Col span={24}>
                 <Button
-                  title="Login"
+                  title={trans?.header?.login}
                   styleType={EButtonStyleType.RED}
                   iconName={EIconName.Unlock}
                   iconColor={EIconColor.WHITE}
                   reverse
+                  onClick={onLogin}
                 />
               </Col>
               <Col span={24}>
-                <Button title="Signup" styleType={EButtonStyleType.OUTLINE_RED} />
+                <Button title={trans?.header?.signup} styleType={EButtonStyleType.OUTLINE_RED} link={Paths.SignUp} />
               </Col>
             </>
           )}

@@ -47,6 +47,7 @@ export enum EIconName {
   Map = 'Map',
   DatabaseOff = 'DatabaseOff',
   Calendar = 'Calendar',
+  Upload = 'Upload',
 }
 
 export enum EIconColor {
@@ -61,4 +62,5 @@ export enum EIconColor {
   RADICAL_RED = '#FF1B6D',
   FIORD = '#42526E',
   OSLO_GRAY = '#96999C',
+  LIMED_SPRUCE = '#3C4853',
 }

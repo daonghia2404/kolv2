@@ -1,1 +1,3 @@
-export type TGalleryKolProps = unknown;
+export type TGalleryKolProps = {
+  view?: EGalleryKolView;
+};

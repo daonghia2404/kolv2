@@ -12,8 +12,10 @@ import { removeParam } from '@/utils/functions';
 import SelectLanguage from '@/components/SelectLanguage';
 
 import { TFooterProps } from './Footer.types.d';
+import { useTrans } from '@/utils/hooks';
 
 const Footer: React.FC<TFooterProps> = () => {
+  const trans = useTrans();
   const { asPath } = useRouter();
 
   return (
@@ -29,14 +31,14 @@ const Footer: React.FC<TFooterProps> = () => {
           <Row align="middle" justify="space-between" className="Footer-main">
             <Col>
               <p style={{ maxWidth: '34.5rem' }} className="Footer-description">
-                Join millions of people who organize work and life with Logoxxx
+                {trans?.footer?.description}
               </p>
             </Col>
             <Col>
               <Row gutter={[48, 24]} align="middle" className="Footer-main">
                 <Col>
                   <ul className="Footer-list flex items-center">
-                    {dataFooterMenu.map((item) => (
+                    {dataFooterMenu({ trans }).map((item) => (
                       <li
                         className={classNames('Footer-list-item', {
                           active: (item.activePaths as string[]).includes(removeParam(asPath)),
@@ -56,7 +58,7 @@ const Footer: React.FC<TFooterProps> = () => {
           </Row>
 
           <div className="Footer-copyright">
-            <p className="Footer-description">Copyright © 202X by Logoxxx</p>
+            <p className="Footer-description">{trans?.footer?.copyright}</p>
           </div>
         </div>
       </div>

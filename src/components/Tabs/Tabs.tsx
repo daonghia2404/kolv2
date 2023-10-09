@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Tabs as AntdTabs } from 'antd';
 import { useRouter } from 'next/router';
 
-import { TTabsProps } from './Tabs.types.d';
 import { removeParam } from '@/utils/functions';
+
+import { TTabsProps } from './Tabs.types.d';
 
 const Tabs: React.FC<TTabsProps> = ({ options = [], onKeyChange }) => {
   const key = 'tabKey';
@@ -13,7 +14,8 @@ const Tabs: React.FC<TTabsProps> = ({ options = [], onKeyChange }) => {
   const [activeKey, setActiveKey] = useState<string | null>(null);
 
   const handleTabChange = (activeKeyChanged: string): void => {
-    router.push({ pathname: removeParam(asPath), query: { [key]: activeKeyChanged } });
+    // router.push({ pathname: removeParam(asPath), query: { [key]: activeKeyChanged } });
+    setActiveKey(activeKeyChanged);
   };
 
   useEffect(() => {
@@ -26,11 +28,16 @@ const Tabs: React.FC<TTabsProps> = ({ options = [], onKeyChange }) => {
   }, [router.query]);
 
   useEffect(() => {
-    if (router.isReady && !activeKey && !router?.query?.[key]) {
-      router.push({ pathname: removeParam(asPath), query: { [key]: options[0].key } });
-    }
+    if (!activeKey) setActiveKey(options[0].key);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.isReady]);
+  }, []);
+
+  // useEffect(() => {
+  //   if (router.isReady && !activeKey && !router?.query?.[key]) {
+  //     router.push({ pathname: removeParam(asPath), query: { [key]: options[0].key } });
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [router.isReady]);
 
   return (
     <div className="Tabs">

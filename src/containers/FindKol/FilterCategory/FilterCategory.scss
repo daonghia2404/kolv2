@@ -7,7 +7,12 @@
 
   &-wrapper {
     position: sticky;
-    top: 16.8rem;
+    top: calc(16.8rem - 3.2rem * 2);
+
+    @media (min-width: 992px) {
+      max-height: calc(100vh - 12rem);
+      overflow: auto;
+    }
   }
 
   &-header {

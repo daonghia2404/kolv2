@@ -5,9 +5,12 @@ import { TSelectOption } from '@/components/Select';
 import { TRootState } from '@/redux/reducers';
 // import { TUploadFilesResponse } from '@/services/api';
 import { getTotalPage } from '@/utils/functions';
-import { Router } from 'next/router';
+import { Router, useRouter } from 'next/router';
 import React, { useState, useEffect, useRef, useCallback, RefObject } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import en from '../../public/lang/en';
+import de from '../../public/lang/de';
+import { ELocale } from '@/common/enums';
 
 export const useDebounce = (value: string, delay: number): string => {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -367,3 +370,20 @@ export function useIntersectionObserver(
 
   return entry;
 }
+
+export const useTrans = () => {
+  const { locale } = useRouter();
+
+  const switchTrans = () => {
+    switch (locale) {
+      case ELocale.EN:
+        return en;
+      case ELocale.DE:
+        return de;
+      default:
+        return en;
+    }
+  };
+
+  return switchTrans();
+};

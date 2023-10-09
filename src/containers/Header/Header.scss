@@ -2,6 +2,11 @@
 
 .Header {
   padding: 4.8rem 0;
+  transition: $common-transition;
+
+  &.small {
+    padding: 1.6rem 0;
+  }
 
   &-wrapper {
     padding: 1.2rem;

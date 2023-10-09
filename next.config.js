@@ -6,6 +6,11 @@ const nextConfig = {
   images: {
     domains: ['localhost'],
   },
+  trailingSlash: false,
+  i18n: {
+    locales: ['en', 'de'],
+    defaultLocale: 'en',
+  },
 };
 
 module.exports = nextConfig;

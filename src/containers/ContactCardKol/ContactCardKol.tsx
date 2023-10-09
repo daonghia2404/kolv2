@@ -36,7 +36,7 @@ const ContactCardKol: React.FC<TContactCardKolProps> = () => {
               title="Call"
               iconName={EIconName.Phone}
               iconColor={EIconColor.WHITE}
-              styleType={EButtonStyleType.RED}
+              styleType={EButtonStyleType.LIMED_SPRUCE}
               size="large"
             />
             <div className="ContactCardKol-btn-verify">
@@ -48,7 +48,7 @@ const ContactCardKol: React.FC<TContactCardKolProps> = () => {
               title="SMS"
               iconName={EIconName.Sms}
               iconColor={EIconColor.WHITE}
-              styleType={EButtonStyleType.RED}
+              styleType={EButtonStyleType.LIMED_SPRUCE}
               size="large"
             />
             <div className="ContactCardKol-btn-verify">

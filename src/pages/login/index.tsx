@@ -6,6 +6,7 @@ import AuthLayout from '@/layouts/AuthLayout';
 import Input from '@/components/Input';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Button, { EButtonStyleType } from '@/components/Button';
+import { Paths } from '@/routers/constants';
 
 const Login = () => {
   const [form] = Form.useForm();
@@ -46,6 +47,7 @@ const Login = () => {
                     styleType={EButtonStyleType.RED}
                     reverse
                     htmlType="submit"
+                    link={Paths.Home}
                   />
                 </Col>
               </Row>
