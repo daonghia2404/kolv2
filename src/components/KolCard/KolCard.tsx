@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
+import { Skeleton } from 'antd';
 
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
+import Button, { EButtonStyleType } from '@/components/Button';
 
 import { TKolCardProps } from './KolCard.types.d';
-import Button, { EButtonStyleType } from '@/components/Button';
-import { Skeleton } from 'antd';
 
 const KolCard: React.FC<TKolCardProps> = ({
   loading,
@@ -22,6 +22,7 @@ const KolCard: React.FC<TKolCardProps> = ({
   promotion,
   horizontal,
   description,
+  online,
   onClick,
 }) => {
   return (
@@ -59,17 +60,17 @@ const KolCard: React.FC<TKolCardProps> = ({
             )}
 
             <div className="KolCard-info-wrapper">
-              <div className="KolCard-name flex items-center">
-                {name}
+              <div className={classNames('KolCard-name flex items-center', { online })}>
+                <span>{name}</span>
                 <div className="KolCard-rank">{rank && <Image src={rank} alt="" />}</div>
               </div>
 
               <div className="KolCard-age flex items-center">
-                {age} years old
+                {age}. Tokyo, Japan
                 <div className="KolCard-country">{country && <Image src={country} alt="" />}</div>
               </div>
 
-              <div className="KolCard-detail flex items-center flex-wrap" style={{ rowGap: '0.8rem' }}>
+              <div className="KolCard-detail flex items-center" style={{ rowGap: '0.8rem' }}>
                 <div className="KolCard-detail-item flex items-center">
                   <Icon name={EIconName.RuleHalfCircle} color={EIconColor.WHITE} />
                   w: {weight}kg

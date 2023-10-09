@@ -10,6 +10,7 @@
 
   &-loading {
     width: 100%;
+
     .ant-skeleton-title {
       width: 100%;
       margin: 0;
@@ -22,6 +23,7 @@
     align-items: center;
     padding: 2.4rem;
     column-gap: 2.4rem;
+    background: $outer-space;
 
     .KolCard {
       &-loading {
@@ -38,6 +40,9 @@
         max-width: 17rem;
         width: 17rem;
         height: 30rem;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        border: 1px solid rgba($white, 0.2);
       }
 
       &-info {
@@ -48,6 +53,13 @@
 
       &-name {
         font-size: 2.4rem;
+
+        &::before {
+          top: 1.4rem;
+          left: -0.8rem;
+          width: 0.8rem;
+          height: 0.8rem;
+        }
       }
 
       &-play {
@@ -102,13 +114,14 @@
   &-badge {
     position: absolute;
     width: 12rem;
-    height: 2rem;
+    height: 2.4rem;
     z-index: 3;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: $white;
     font-weight: 500;
-    top: 3rem;
-    right: 3rem;
+    top: 3.2rem;
+    right: 3.2rem;
+    column-gap: .2rem;
     transform: translate(50%, -50%) rotate(45deg);
     background: $radical-red;
 
@@ -117,10 +130,10 @@
     }
 
     .Icon {
-      width: 1.2rem;
-      height: 1.2rem;
-      flex: 0 0 1.2rem;
-      max-width: 1.2rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      flex: 0 0 1.6rem;
+      max-width: 1.6rem;
     }
   }
 
@@ -164,17 +177,36 @@
   }
 
   &-name {
-    font-family: 'Poppins', sans-serif;
+    position: relative;
     font-size: 1.8rem;
     color: $white;
     font-weight: 600;
     column-gap: .8rem;
     margin-bottom: 0.4rem;
+
+    span {
+      font-family: 'Poppins', sans-serif;
+      @include ellipsis(1);
+    }
+
+    &.online {
+      &::before {
+        position: absolute;
+        content: '';
+        left: -0.4rem;
+        transform: translateX(-100%);
+        border-radius: 50%;
+        background: $screamin-green;
+        top: 1rem;
+        width: 0.6rem;
+        height: 0.6rem;
+      }
+    }
   }
 
   &-description {
     font-size: 1.4rem;
-    color: $lynch;
+    color: $heather;
     height: 11rem;
     @include ellipsis(5);
   }
@@ -193,10 +225,15 @@
     color: rgba($white, 0.8);
     column-gap: .8rem;
     margin-bottom: 0.8rem;
+    @include ellipsis(1);
   }
 
   &-detail {
     column-gap: 2.8rem;
+
+    @media (max-width: 575px) {
+      column-gap: 1.2rem;
+    }
 
     &-item {
       position: relative;
@@ -216,6 +253,10 @@
           width: 1.2rem;
           background: rgba($white, 0.8);
           content: '';
+
+          @media (max-width: 575px) {
+            display: none;
+          }
         }
       }
 

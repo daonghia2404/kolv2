@@ -51,7 +51,7 @@ const HighlightKol: React.FC<THighlightKolProps> = () => {
                 <Row gutter={[24, 24]}>
                   <Col>
                     <div className="HighlightKol-info-detail-item flex items-center">
-                      27 years old
+                      26. Tokyo, Japan
                       <div className="HighlightKol-info-detail-item-icon">
                         <Image src={IconFlagJp} alt="" />
                       </div>
@@ -101,7 +101,7 @@ const HighlightKol: React.FC<THighlightKolProps> = () => {
           </Col>
         </Row>
         <div className="HighlightKol-sponsored flex items-center">
-          <Icon name={EIconName.Lightning} color={EIconColor.HEATHER} />
+          <Icon name={EIconName.Lightning} color={EIconColor.LYNCH} />
           Sponsored by XXXX
         </div>
       </div>

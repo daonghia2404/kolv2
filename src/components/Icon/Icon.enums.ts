@@ -48,6 +48,8 @@ export enum EIconName {
   DatabaseOff = 'DatabaseOff',
   Calendar = 'Calendar',
   Upload = 'Upload',
+  Reload = 'Reload',
+  Wifi = 'Wifi',
 }
 
 export enum EIconColor {
@@ -56,11 +58,12 @@ export enum EIconColor {
 
   SHARK = '#1E252B',
   OUTER_SPACE = '#2C353D',
-  LYNCH = '#637F97',
-  HEATHER = '#AFBECA',
+  LYNCH = '#65819A',
+  HEATHER = '#B5C3CE',
   PALE_SKY = '#667085',
   RADICAL_RED = '#FF1B6D',
   FIORD = '#42526E',
   OSLO_GRAY = '#96999C',
   LIMED_SPRUCE = '#3C4853',
+  SCREAMIN_GREEN = '#58FF55',
 }

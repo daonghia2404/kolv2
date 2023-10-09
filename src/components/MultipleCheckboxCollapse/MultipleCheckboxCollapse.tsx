@@ -1,5 +1,6 @@
 import React from 'react';
 import { Collapse, CollapsePanelProps, CollapseProps } from 'antd';
+import _ from 'lodash';
 
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Checkbox from '@/components/Checkbox';
@@ -20,11 +21,11 @@ const MultipleCheckboxCollapse: React.FC<TMultipleCheckboxCollapseProps> = ({ va
 
     if (checked) {
       const newData = [...value, ...allChild];
-      onChange?.(newData);
+      onChange?.(_.uniqBy(newData, 'key'));
     } else {
       const includeIds = allChild.map((item) => item.key);
       const newData = value?.filter((item) => !includeIds.includes(item.key));
-      onChange?.(newData);
+      onChange?.(_.uniqBy(newData, 'key'));
     }
   };
 
@@ -33,21 +34,21 @@ const MultipleCheckboxCollapse: React.FC<TMultipleCheckboxCollapseProps> = ({ va
 
     if (checked) {
       const newData = [...value, ...allChild];
-      onChange?.(newData);
+      onChange?.(_.uniqBy(newData, 'key'));
     } else {
       const includeIds = allChild?.map((item) => item.key) || [];
       const newData = value?.filter((item) => !includeIds.includes(item.key));
-      onChange?.(newData);
+      onChange?.(_.uniqBy(newData, 'key'));
     }
   };
 
   const handleCheckItem = (checked: boolean, data: TMultipleCheckboxCollapseData): void => {
     if (checked) {
       const newData = [...value, data];
-      onChange?.(newData);
+      onChange?.(_.uniqBy(newData, 'key'));
     } else {
       const newData = value?.filter((item) => item.key !== data.key);
-      onChange?.(newData);
+      onChange?.(_.uniqBy(newData, 'key'));
     }
   };
 

@@ -13,6 +13,18 @@
         opacity: 1;
       }
     }
+
+    &-online-btn {
+      .ant-btn {
+        font-weight: 400;
+        padding-right: 0;
+        padding-left: 0.8rem;
+
+        .Button-title {
+          font-family: 'Poppins', sans-serif;
+        }
+      }
+    }
   }
 
   &-grid {

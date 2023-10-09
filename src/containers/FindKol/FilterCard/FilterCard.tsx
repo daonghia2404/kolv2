@@ -64,9 +64,11 @@ const FilterCard: React.FC<TFilterCardProps> = ({ data = [], loading, onOpenFilt
             </Col>
             <Col>
               <Button
-                iconName={EIconName.SortAZ}
-                iconColor={EIconColor.LYNCH}
+                className={classNames('FilterCard-header-online-btn', { active: typeLayout === ETypeLayout.LIST })}
+                iconName={EIconName.Wifi}
+                iconColor={EIconColor.SCREAMIN_GREEN}
                 styleType={EButtonStyleType.TRANSPARENT}
+                title="45 online now"
               />
             </Col>
           </Row>

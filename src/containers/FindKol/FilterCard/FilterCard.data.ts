@@ -23,6 +23,7 @@ export const dataFindKolCards = [
     height: 169,
     topPick: false,
     promotion: true,
+    online: true,
     description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {

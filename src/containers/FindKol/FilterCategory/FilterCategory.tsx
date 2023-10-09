@@ -38,13 +38,19 @@ const FilterCategory: React.FC<TFilterCategoryProps> = ({ onFilter }) => {
           <div className="FilterCategory-header-icon">
             <Icon name={EIconName.Filter} color={EIconColor.FIORD} />
           </div>
-          <div className="FilterCategory-header-title">Filter (4,635)</div>
-          <div
-            className={classNames('FilterCategory-header-all nowrap', { active: isSelectAll })}
-            onClick={handleSelectAll}
-          >
-            Select All
+          <div className="FilterCategory-header-title">
+            Filter <span style={{ color: EIconColor.SCREAMIN_GREEN }}>(4,635)</span>
           </div>
+          {!isSelectAll ? (
+            <div className={classNames('FilterCategory-header-all flex items-center nowrap')} onClick={handleSelectAll}>
+              Select All
+            </div>
+          ) : (
+            <div className={classNames('FilterCategory-header-all flex items-center nowrap')} onClick={handleSelectAll}>
+              <Icon name={EIconName.Reload} color={EIconColor.LYNCH} />
+              Reset All
+            </div>
+          )}
         </div>
 
         <div className="FilterCategory-body">

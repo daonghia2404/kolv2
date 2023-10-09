@@ -176,3 +176,13 @@
     background-repeat: no-repeat;
   }
 }
+
+@mixin iconColor($color) {
+  .stroke {
+    stroke: $color;
+  }
+
+  .fill {
+    fill: $color;
+  }
+}

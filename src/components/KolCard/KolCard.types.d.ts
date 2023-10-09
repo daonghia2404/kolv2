@@ -14,5 +14,6 @@ export type TKolCardProps = {
   horizontal?: boolean;
   description?: string;
   loading?: boolean;
+  online?: boolean;
   onClick?: () => void;
 };

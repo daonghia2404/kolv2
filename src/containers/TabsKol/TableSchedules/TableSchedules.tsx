@@ -55,9 +55,9 @@ const TableSchedules: React.FC<TTableSchedulesProps> = () => {
                   12:00 AM
                   <span>-</span>
                   11:00 AM
-                  <Icon name={EIconName.ArrowsReverseSquare} color={EIconColor.WHITE} />
+                  {/* <Icon name={EIconName.ArrowsReverseSquare} color={EIconColor.WHITE} /> */}
                 </div>
-                <div className="TableSchedules-body-item flex justify-end">
+                {/* <div className="TableSchedules-body-item flex justify-end">
                   <Button
                     title="Book now"
                     styleType={EButtonStyleType.TEXT_RED}
@@ -65,7 +65,7 @@ const TableSchedules: React.FC<TTableSchedulesProps> = () => {
                     iconColor={EIconColor.RADICAL_RED}
                     reverse
                   />
-                </div>
+                </div> */}
               </div>
             );
           })}

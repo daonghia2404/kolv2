@@ -53,6 +53,8 @@ import Map from './Map';
 import DatabaseOff from './DatabaseOff';
 import Calendar from './Calendar';
 import Upload from './Upload';
+import Reload from './Reload';
+import Wifi from './Wifi';
 
 const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) => {
   const renderIcon = (): React.ReactElement => {
@@ -155,6 +157,10 @@ const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) 
         return <Calendar color={color} />;
       case EIconName.Upload:
         return <Upload color={color} />;
+      case EIconName.Reload:
+        return <Reload color={color} />;
+      case EIconName.Wifi:
+        return <Wifi color={color} />;
 
       default:
         return <></>;
