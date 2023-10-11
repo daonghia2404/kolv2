@@ -7,10 +7,30 @@
     left: 0;
     width: 100%;
     z-index: 10;
-
   }
 
   &-body {
-    padding-top: 16.8rem;
+    padding-top: calc(10.8rem + 2.4rem);
+  }
+
+  &-ontop {
+    position: fixed;
+    bottom: 3.2rem;
+    right: 3.2rem;
+    z-index: 10;
+    transition: $common-transition;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+
+    &.visible {
+      visibility: visible;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .Button-icon {
+      transform: rotate(180deg);
+    }
   }
 }

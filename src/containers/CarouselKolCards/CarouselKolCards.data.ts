@@ -22,8 +22,10 @@ export const dataCarouselKolCards = [
     country: IconFlagJp,
     weight: 44,
     height: 169,
-    topPick: true,
-    promotion: false,
+    topPick: false,
+    promotion: true,
+    online: true,
+    video: '/static/videos/video-sample.mp4',
   },
   {
     id: '2',

@@ -22,6 +22,15 @@
       @media (max-width: 1200px) {
         height: calc(53vw - 1.2rem * 2);
       }
+
+      .Video {
+        &-play {
+          .Icon {
+            width: 9.6rem;
+            height: 9.6rem;
+          }
+        }
+      }
     }
 
     &-action {

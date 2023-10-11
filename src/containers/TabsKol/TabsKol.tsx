@@ -4,6 +4,7 @@ import Tabs from '@/components/Tabs';
 import TableSchedules from '@/containers/TabsKol/TableSchedules';
 
 import { TTabsKolProps } from './TabsKol.types.d';
+import Services from '@/containers/TabsKol/Services';
 
 const TabsKol: React.FC<TTabsKolProps> = () => {
   const dataTabsKol = [
@@ -15,7 +16,7 @@ const TabsKol: React.FC<TTabsKolProps> = () => {
     {
       key: 'services',
       title: 'Services',
-      children: <></>,
+      children: <Services />,
     },
     {
       key: 'schedule',

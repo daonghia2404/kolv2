@@ -8,6 +8,7 @@
   &-wrapper {
     position: sticky;
     top: calc(16.8rem - 3.2rem * 2);
+    // @include styleScrollBar();
 
     @media (min-width: 992px) {
       max-height: calc(100vh - 12rem);

@@ -93,6 +93,13 @@
       cursor: pointer;
       background: $black;
 
+      .Video {
+        img {
+          opacity: 1;
+        }
+      }
+
+      .Video,
       img {
         opacity: 0.7;
         transition: $common-transition;
@@ -100,6 +107,7 @@
 
       &:hover,
       &.active {
+        .Video,
         img {
           opacity: 1;
         }

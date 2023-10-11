@@ -7,6 +7,7 @@ import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Button, { EButtonStyleType } from '@/components/Button';
 
 import { TKolCardProps } from './KolCard.types.d';
+import Video from '@/components/Video';
 
 const KolCard: React.FC<TKolCardProps> = ({
   loading,
@@ -22,6 +23,7 @@ const KolCard: React.FC<TKolCardProps> = ({
   promotion,
   horizontal,
   description,
+  video,
   online,
   onClick,
 }) => {
@@ -47,10 +49,15 @@ const KolCard: React.FC<TKolCardProps> = ({
             </div>
           )}
 
-          <div className="KolCard-image">{image && <Image src={image} alt="" />}</div>
-          <div className="KolCard-play">
-            <Icon name={EIconName.PlayCircle} />
+          <div className="KolCard-image">
+            {video && <Video src={video} thumbnail={image} placement={horizontal ? 'bottomRight' : 'topLeft'} />}
+            {!video && image && <Image src={image} alt="" />}
           </div>
+
+          {/* <div className="KolCard-play">
+            <Icon name={EIconName.PlayCircle} />
+          </div> */}
+
           <div className="KolCard-info flex flex-col justify-end">
             {!horizontal && (
               <>

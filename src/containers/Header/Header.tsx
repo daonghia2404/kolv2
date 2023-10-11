@@ -49,7 +49,7 @@ const Header: React.FC<THeaderProps> = () => {
 
   const triggerScrollToHeaderHeight = (): void => {
     window.addEventListener('scroll', (e) => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 0) {
         setIsScrollBelowHeader(true);
       } else {
         setIsScrollBelowHeader(false);

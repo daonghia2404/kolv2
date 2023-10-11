@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import Slider from 'react-slick';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 import Modal from '@/components/Modal';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Carousels from '@/components/Carousels';
+import Video from '@/components/Video';
 
 import { TViewGalleryModalProps } from './ViewGalleryModal.types';
 
@@ -17,17 +18,20 @@ const ViewGalleryModal: React.FC<TViewGalleryModalProps> = ({
 }) => {
   const [carouselRef, setCarouselRef] = useState<Slider>();
   const [currentIndexSlide, setCurrentIndexSlide] = useState<number>(defaultIndex);
+  const currentSlideData = dataCarousel[currentIndexSlide];
 
   useEffect(() => {
     if (visible) {
       setCurrentIndexSlide(defaultIndex);
+      carouselRef?.slickGoTo?.(defaultIndex);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible, defaultIndex]);
 
-  useEffect(() => {
-    carouselRef?.slickGoTo?.(defaultIndex);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentIndexSlide]);
+  // useEffect(() => {
+  //   carouselRef?.slickGoTo?.(currentIndexSlide);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [currentIndexSlide]);
 
   return (
     <Modal
@@ -39,7 +43,12 @@ const ViewGalleryModal: React.FC<TViewGalleryModalProps> = ({
     >
       <div className="ViewGalleryModal-wrapper flex flex-col">
         <div className="ViewGalleryModal-view">
-          <Image src={dataCarousel[currentIndexSlide]} alt="" />
+          {currentSlideData.video ? (
+            <Video src={currentSlideData?.video} thumbnail={currentSlideData?.image} placement="center" objectFit="contain" />
+          ) : (
+            <Image src={currentSlideData?.image} alt="" />
+          )}
+          
         </div>
         <div className="ViewGalleryModal-list">
           <Carousels
@@ -48,16 +57,21 @@ const ViewGalleryModal: React.FC<TViewGalleryModalProps> = ({
             arrows={false}
             dots={false}
             autoplay={false}
-            focusOnSelect
+            // focusOnSelect
             onInit={setCarouselRef}
-            onBeforeChange={(oldIndex, newIndex): void => setCurrentIndexSlide(newIndex)}
+            // onBeforeChange={(oldIndex, newIndex): void => setCurrentIndexSlide(newIndex)}
           >
-            {dataCarousel.map((item: StaticImageData, index: number) => (
+            {dataCarousel.map((item, index) => (
               <div
                 key={index}
                 className={classNames('ViewGalleryModal-list-item', { active: index === currentIndexSlide })}
+                onClick={(): void => setCurrentIndexSlide(index)}
               >
-                <Image src={item} alt="" />
+                {item.video ? (
+                  <Video src={item.video} thumbnail={item.image} placement="center" objectFit="contain" disabled />
+                ) : (
+                  <Image src={item.image} alt="" />
+                )}
               </div>
             ))}
           </Carousels>

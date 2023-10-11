@@ -16,6 +16,7 @@ import { useModalState } from '@/utils/hooks';
 
 import { TGalleryKolProps } from './GalleryKol.types.d';
 import { EGalleryKolView } from './GalleryKol.enums';
+import Video from '@/components/Video';
 
 const GalleryKol: React.FC<TGalleryKolProps> = ({ view }) => {
   const isViewReview = view === EGalleryKolView.REVIEW;
@@ -27,15 +28,15 @@ const GalleryKol: React.FC<TGalleryKolProps> = ({ view }) => {
 
   const [viewGalleryModalState, handleOpenViewGalleryModal, handleCloseViewGalleryModal] = useModalState();
   const dataCarousel = [
-    ImageKolGallery1,
-    ImageKolGallery2,
-    ImageKolGallery3,
-    ImageKolGallery1,
-    ImageKolGallery2,
-    ImageKolGallery3,
-    ImageKolGallery1,
-    ImageKolGallery2,
-    ImageKolGallery3,
+    { image: ImageKolGallery1, video: '/static/videos/video-sample.mp4' },
+    { image: ImageKolGallery2 },
+    { image: ImageKolGallery3 },
+    { image: ImageKolGallery1 },
+    { image: ImageKolGallery2 },
+    { image: ImageKolGallery3 },
+    { image: ImageKolGallery1 },
+    { image: ImageKolGallery2 },
+    { image: ImageKolGallery3 },
   ];
 
   const limitGalleryList = dataCarousel.slice(0, maxLimitImage);
@@ -55,8 +56,16 @@ const GalleryKol: React.FC<TGalleryKolProps> = ({ view }) => {
               onBeforeChange={(oldIndex, newIndex): void => setCurrentIndexSlide(newIndex)}
             >
               {dataCarousel.map((item, index) => (
-                <div key={index} className="GalleryKol-carousel-item">
-                  <Image src={item} alt="" />
+                <div
+                  key={index}
+                  className="GalleryKol-carousel-item"
+                  onClick={(): void => handleOpenViewGalleryModal(undefined, { defaultIndex: currentIndexSlide })}
+                >
+                  {item.video ? (
+                    <Video src={item.video} thumbnail={item.image} placement="center" objectFit="contain" disabled />
+                  ) : (
+                    <Image src={item.image} alt="" />
+                  )}
                 </div>
               ))}
             </Carousels>
@@ -101,7 +110,11 @@ const GalleryKol: React.FC<TGalleryKolProps> = ({ view }) => {
                     className={classNames('GalleryKol-list-item', { review: isViewReview, detail: isViewDetail })}
                     onClick={(): void => handleOpenViewGalleryModal(undefined, { defaultIndex: index })}
                   >
-                    <Image src={item} alt="" />
+                    {item.video ? (
+                      <Video src={item.video} thumbnail={item.image} placement="center" objectFit="contain" disabled />
+                    ) : (
+                      <Image src={item.image} alt="" />
+                    )}
                     {isMoreItem && (
                       <div
                         className={classNames('GalleryKol-list-item-overlay flex items-center justify-center nowrap', {

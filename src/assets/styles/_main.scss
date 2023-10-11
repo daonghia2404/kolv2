@@ -10,6 +10,8 @@
 @import './mixins';
 @import './importers';
 
+@include styleScrollBar();
+
 * {
   font-family: Inter, sans-serif;
 }
@@ -117,12 +119,8 @@ body {
 
 .container {
   max-width: 144rem;
-  padding: 0 1.2rem;
+  padding: 0 16px;
   margin: 0 auto;
-
-  @media (max-width: 991px) {
-    padding: 0 1.6rem;
-  }
 }
 
 .flex {

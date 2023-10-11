@@ -1,0 +1,47 @@
+@import '@/assets/styles/_global.scss';
+
+.Video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    margin: auto;
+  }
+
+  &-thumbnail {
+    @include fullAbsolute;
+    @include centerScaleImage;
+    z-index: 1;
+  }
+
+  &-play {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+
+    .Icon {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+
+    &.topLeft {
+      top: 1.6rem;
+      left: 1.6rem;
+    }
+
+    &.center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.bottomRight {
+      bottom: 1.6rem;
+      right: 1.6rem;
+    }
+  }
+}

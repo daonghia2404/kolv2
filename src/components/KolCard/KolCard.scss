@@ -154,6 +154,7 @@
     @include fullAbsolute;
     padding: 2rem;
     z-index: 2;
+    pointer-events: none;
 
     &-wrapper {
       position: relative;

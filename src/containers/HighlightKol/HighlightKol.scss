@@ -22,6 +22,12 @@
       @media (max-width: 991px) {
         flex-wrap: wrap;
         justify-content: center;
+
+        &>.ant-col {
+          &:first-child {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -39,8 +45,8 @@
       flex: 0 0 14.4rem;
       height: 25.6rem;
       overflow: hidden;
-      @include centerScaleImage;
       transform: scale(0.85);
+      @include centerScaleImage;
 
       @media (max-width: 575px) {
         width: calc(100% / 3);
