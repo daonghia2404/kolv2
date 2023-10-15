@@ -10,10 +10,10 @@ import Button, { EButtonStyleType } from '@/components/Button';
 import KolCard from '@/components/KolCard';
 import AdBlock from '@/components/AdBlock';
 import { Paths } from '@/routers/constants';
+import { getArrayFrom0To } from '@/utils/functions';
 
 import { ETypeLayout } from './FilterCard.enums';
 import { TFilterCardProps } from './FilterCard.types';
-import { getArrayFrom0To } from '@/utils/functions';
 
 const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
@@ -102,7 +102,7 @@ const FilterCard: React.FC<TFilterCardProps> = ({ data = [], loading, onOpenFilt
 
                 {loading && (
                   <>
-                    {getArrayFrom0To(4).map((item) => (
+                    {getArrayFrom0To(8).map((item) => (
                       <Col key={item} span={12} sm={{ span: 8 }} md={{ span: 6 }}>
                         <div className="FilterCard-grid-item">
                           <KolCard loading />
@@ -138,7 +138,7 @@ const FilterCard: React.FC<TFilterCardProps> = ({ data = [], loading, onOpenFilt
 
                 {loading && (
                   <>
-                    {getArrayFrom0To(4).map((item) => (
+                    {getArrayFrom0To(8).map((item) => (
                       <Col key={item} span={24} md={{ span: 12 }}>
                         <div className="FilterCard-list-item">
                           <KolCard horizontal loading />

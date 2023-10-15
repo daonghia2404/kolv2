@@ -7,16 +7,17 @@ import classNames from 'classnames';
 import ImageKolGallery1 from '@/assets/images/image-kol-gallery-1.png';
 import ImageKolGallery2 from '@/assets/images/image-kol-gallery-2.png';
 import ImageKolGallery3 from '@/assets/images/image-kol-gallery-3.png';
+import ImageKolGallery4 from '@/assets/images/image-kol-gallery-4.png';
 import Carousels from '@/components/Carousels';
 import Button, { EButtonStyleType } from '@/components/Button';
 import { EIconColor, EIconName } from '@/components/Icon';
 import { addZeroIfLessThanTen } from '@/utils/functions';
 import ViewGalleryModal from '@/containers/GalleryKol/ViewGalleryModal';
 import { useModalState } from '@/utils/hooks';
+import Video from '@/components/Video';
 
 import { TGalleryKolProps } from './GalleryKol.types.d';
 import { EGalleryKolView } from './GalleryKol.enums';
-import Video from '@/components/Video';
 
 const GalleryKol: React.FC<TGalleryKolProps> = ({ view }) => {
   const isViewReview = view === EGalleryKolView.REVIEW;
@@ -31,12 +32,15 @@ const GalleryKol: React.FC<TGalleryKolProps> = ({ view }) => {
     { image: ImageKolGallery1, video: '/static/videos/video-sample.mp4' },
     { image: ImageKolGallery2 },
     { image: ImageKolGallery3 },
+    { image: ImageKolGallery4 },
     { image: ImageKolGallery1 },
     { image: ImageKolGallery2 },
     { image: ImageKolGallery3 },
+    { image: ImageKolGallery4 },
     { image: ImageKolGallery1 },
     { image: ImageKolGallery2 },
     { image: ImageKolGallery3 },
+    { image: ImageKolGallery4 },
   ];
 
   const limitGalleryList = dataCarousel.slice(0, maxLimitImage);

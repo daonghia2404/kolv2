@@ -36,9 +36,9 @@ const KolCard: React.FC<TKolCardProps> = ({
       ) : (
         <>
           {topPick && (
-            <div className="KolCard-badge flex items-center justify-center">
-              <Icon name={EIconName.ThumbUp} color={EIconColor.WHITE} />
-              Top Picks
+            <div className="KolCard-badge promotion flex items-center justify-center">
+              {/* <Icon name={EIconName.ThumbUp} color={EIconColor.WHITE} /> */}
+              🔥 Hot Pick
             </div>
           )}
 
@@ -69,7 +69,6 @@ const KolCard: React.FC<TKolCardProps> = ({
             <div className="KolCard-info-wrapper">
               <div className={classNames('KolCard-name flex items-center', { online })}>
                 <span>{name}</span>
-                <div className="KolCard-rank">{rank && <Image src={rank} alt="" />}</div>
               </div>
 
               <div className="KolCard-age flex items-center">
@@ -89,9 +88,18 @@ const KolCard: React.FC<TKolCardProps> = ({
                 </div>
               </div>
 
-              {horizontal && description && (
+              {!horizontal && (
+                <div className="KolCard-verify flex items-center">
+                  {rank && <Image src={rank} alt="" />}
+                  Verified profile
+                </div>
+              )}
+
+              {horizontal && (
                 <p className="KolCard-description" style={{ margin: '2.4rem 0' }}>
-                  {description}
+                  Im Cathay, content creator and influencer with a passion for exploring and sharing unique life
+                  experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my
+                  lens...
                 </p>
               )}
 
@@ -107,6 +115,11 @@ const KolCard: React.FC<TKolCardProps> = ({
                 </div>
               )}
             </div>
+          </div>
+
+          <div className="KolCard-verify light flex items-center">
+            {rank && <Image src={rank} alt="" />}
+            Verified profile
           </div>
         </>
       )}

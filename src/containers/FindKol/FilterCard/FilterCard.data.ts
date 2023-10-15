@@ -1,4 +1,5 @@
 import IconRankV from '@/assets/icons/icon-rank-v.svg';
+
 import ImageModel1 from '@/assets/images/image-model-1.png';
 import ImageModel2 from '@/assets/images/image-model-2.png';
 import ImageModel3 from '@/assets/images/image-model-3.png';
@@ -9,6 +10,24 @@ import ImageModel7 from '@/assets/images/image-model-7.png';
 import ImageModel8 from '@/assets/images/image-model-8.png';
 import ImageModel9 from '@/assets/images/image-model-9.png';
 import ImageModel10 from '@/assets/images/image-model-10.png';
+import ImageModel11 from '@/assets/images/image-model-11.png';
+import ImageModel12 from '@/assets/images/image-model-12.png';
+import ImageModel13 from '@/assets/images/image-model-13.png';
+import ImageModel14 from '@/assets/images/image-model-14.png';
+import ImageModel15 from '@/assets/images/image-model-15.png';
+import ImageModel16 from '@/assets/images/image-model-16.png';
+import ImageModel17 from '@/assets/images/image-model-17.png';
+import ImageModel18 from '@/assets/images/image-model-18.png';
+import ImageModel19 from '@/assets/images/image-model-19.png';
+import ImageModel20 from '@/assets/images/image-model-20.png';
+import ImageModel21 from '@/assets/images/image-model-21.png';
+import ImageModel22 from '@/assets/images/image-model-22.png';
+import ImageModel23 from '@/assets/images/image-model-23.png';
+import ImageModel24 from '@/assets/images/image-model-24.png';
+import ImageModel25 from '@/assets/images/image-model-25.png';
+import ImageModel26 from '@/assets/images/image-model-26.png';
+import ImageModel27 from '@/assets/images/image-model-27.png';
+import ImageModel28 from '@/assets/images/image-model-28.png';
 import IconFlagJp from '@/assets/icons/icon-flag-jp.svg';
 
 export const dataFindKolCards = [
@@ -25,7 +44,6 @@ export const dataFindKolCards = [
     promotion: true,
     online: true,
     video: '/static/videos/video-sample.mp4',
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: '2',
@@ -38,7 +56,6 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: '3',
@@ -51,7 +68,6 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: '4',
@@ -64,7 +80,6 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: '5',
@@ -77,7 +92,6 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: '6',
@@ -90,7 +104,6 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: 'ad1',
@@ -107,7 +120,6 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: '8',
@@ -120,7 +132,6 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: '9',
@@ -133,7 +144,6 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
   },
   {
     id: '10',
@@ -146,6 +156,221 @@ export const dataFindKolCards = [
     height: 169,
     topPick: true,
     promotion: false,
-    description: `I'm Cathay, content creator and influencer with a passion for exploring and sharing unique life experiences. My focus revolves around showcasing culture, travel, food, and lifestyle through my lens...`,
+  },
+  {
+    id: '11',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel11,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '12',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel12,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '13',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel13,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '14',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel14,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '15',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel15,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '16',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel16,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '17',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel17,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '18',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel18,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '19',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel19,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '20',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel20,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '21',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel21,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '22',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel22,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '23',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel23,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '24',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel24,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '25',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel25,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '26',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel26,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '27',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel27,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
+  },
+  {
+    id: '28',
+    name: 'Catherine',
+    rank: IconRankV,
+    image: ImageModel28,
+    age: 27,
+    country: IconFlagJp,
+    weight: 44,
+    height: 169,
+    topPick: true,
+    promotion: false,
   },
 ];

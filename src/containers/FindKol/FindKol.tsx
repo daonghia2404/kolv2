@@ -17,6 +17,7 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 const DrawerModify: React.FC<DrawerProps & { children?: React.ReactNode }> = Drawer;
 
 const FindKol: React.FC<TFindKolProps> = () => {
+  const ref = useRef<HTMLDivElement>(null);
   const loadMoreRef = useRef<HTMLDivElement>(null);
   const loadMoreEntry = useIntersectionObserver(loadMoreRef, {});
   const isVisibleLoadMoreEntry = !!loadMoreEntry?.isIntersecting;
@@ -26,8 +27,13 @@ const FindKol: React.FC<TFindKolProps> = () => {
   const [kolDataState, setKolDataState] = useState<any>([]);
 
   const getData = useCallback((isFetchNew?: boolean): void => {
-    if (isFetchNew) setKolDataState([]);
     setLoading(true);
+
+    if (isFetchNew) {
+      setKolDataState([]);
+      window.scrollTo({ top: (ref?.current?.offsetTop || 0) - 48, behavior: 'smooth' });
+    }
+
     setTimeout(() => {
       setKolDataState((prevState: any) => (isFetchNew ? dataFindKolCards : [...prevState, ...dataFindKolCards]));
       setLoading(false);
@@ -47,7 +53,7 @@ const FindKol: React.FC<TFindKolProps> = () => {
   }, [getData]);
 
   return (
-    <div className="FindKol">
+    <div ref={ref} className="FindKol">
       <div className="FindKol-wrapper">
         <Row gutter={[32, 32]}>
           <Col span={8} className="FindKol-filter-category">

@@ -5,16 +5,9 @@
     @include fullAbsolute;
     content: '';
     background: url('../../assets/images/bg-auth-layout.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: right center;
-    mix-blend-mode: overlay;
-    mix-blend-mode: lighten;
-    opacity: 0.5;
-
-    @media (max-width: 768px) {
-      background-size: cover;
-    }
+    background-position: left center;
   }
 
   &-header {
