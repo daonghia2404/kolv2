@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { Skeleton } from 'antd';
 
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import Button, { EButtonStyleType } from '@/components/Button';
+import Video from '@/components/Video';
 
 import { TKolCardProps } from './KolCard.types.d';
-import Video from '@/components/Video';
 
 const KolCard: React.FC<TKolCardProps> = ({
   loading,
@@ -27,6 +27,8 @@ const KolCard: React.FC<TKolCardProps> = ({
   online,
   onClick,
 }) => {
+  const [isPlayingVideo, setIsPlayingVideo] = useState<boolean>(!video);
+
   return (
     <div className={classNames('KolCard', { 'hide-info': hideInfo, horizontal })} onClick={onClick}>
       {loading ? (
@@ -50,7 +52,15 @@ const KolCard: React.FC<TKolCardProps> = ({
           )}
 
           <div className="KolCard-image">
-            {video && <Video src={video} thumbnail={image} placement={horizontal ? 'bottomRight' : 'topLeft'} />}
+            {video && (
+              <Video
+                src={video}
+                thumbnail={image}
+                placement={horizontal ? 'bottomRight' : 'topLeft'}
+                onPlay={(): void => setIsPlayingVideo(true)}
+                onPause={(): void => setIsPlayingVideo(false)}
+              />
+            )}
             {!video && image && <Image src={image} alt="" />}
           </div>
 
@@ -58,7 +68,7 @@ const KolCard: React.FC<TKolCardProps> = ({
             <Icon name={EIconName.PlayCircle} />
           </div> */}
 
-          <div className="KolCard-info flex flex-col justify-end">
+          <div className={classNames('KolCard-info flex flex-col justify-end', { active: isPlayingVideo })}>
             {!horizontal && (
               <>
                 <div className="KolCard-info-overlay light" />

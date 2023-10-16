@@ -7,4 +7,6 @@ export type TVideoProps = {
   placement?: TooltipPlacement | 'center';
   objectFit?: 'cover' | 'contain';
   disabled?: boolean;
+  onPlay?: () => void;
+  onPause?: () => void;
 };

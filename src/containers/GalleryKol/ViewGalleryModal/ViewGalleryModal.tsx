@@ -16,6 +16,7 @@ const ViewGalleryModal: React.FC<TViewGalleryModalProps> = ({
   dataCarousel = [],
   onClose,
 }) => {
+  const [isDragging, setIsDragging] = useState<boolean>(false);
   const [carouselRef, setCarouselRef] = useState<Slider>();
   const [currentIndexSlide, setCurrentIndexSlide] = useState<number>(defaultIndex);
   const currentSlideData = dataCarousel[currentIndexSlide];
@@ -44,11 +45,15 @@ const ViewGalleryModal: React.FC<TViewGalleryModalProps> = ({
       <div className="ViewGalleryModal-wrapper flex flex-col">
         <div className="ViewGalleryModal-view">
           {currentSlideData.video ? (
-            <Video src={currentSlideData?.video} thumbnail={currentSlideData?.image} placement="center" objectFit="contain" />
+            <Video
+              src={currentSlideData?.video}
+              thumbnail={currentSlideData?.image}
+              placement="center"
+              objectFit="contain"
+            />
           ) : (
             <Image src={currentSlideData?.image} alt="" />
           )}
-          
         </div>
         <div className="ViewGalleryModal-list">
           <Carousels
@@ -59,6 +64,7 @@ const ViewGalleryModal: React.FC<TViewGalleryModalProps> = ({
             autoplay={false}
             // focusOnSelect
             onInit={setCarouselRef}
+            onDragging={setIsDragging}
             // onBeforeChange={(oldIndex, newIndex): void => setCurrentIndexSlide(newIndex)}
           >
             {dataCarousel.map((item, index) => (
@@ -84,7 +90,10 @@ const ViewGalleryModal: React.FC<TViewGalleryModalProps> = ({
         <div
           className="ViewGalleryModal-action-btn flex items-center justify-center arrow"
           onClick={(): void => {
-            carouselRef?.slickNext?.();
+            if (!isDragging && dataCarousel[currentIndexSlide + 1]) {
+              carouselRef?.slickNext?.();
+              setCurrentIndexSlide(currentIndexSlide + 1);
+            }
           }}
         >
           <Icon name={EIconName.ArrowRightShort} color={EIconColor.LYNCH} />
@@ -92,7 +101,10 @@ const ViewGalleryModal: React.FC<TViewGalleryModalProps> = ({
         <div
           className="ViewGalleryModal-action-btn flex items-center justify-center arrow"
           onClick={(): void => {
-            carouselRef?.slickPrev?.();
+            if (!isDragging && dataCarousel[currentIndexSlide - 1]) {
+              carouselRef?.slickPrev?.();
+              setCurrentIndexSlide(currentIndexSlide - 1);
+            }
           }}
         >
           <Icon name={EIconName.ArrowLeftShort} color={EIconColor.LYNCH} />
