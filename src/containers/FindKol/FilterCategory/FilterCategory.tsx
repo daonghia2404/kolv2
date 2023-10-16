@@ -21,15 +21,12 @@ const FilterCategory: React.FC<TFilterCategoryProps> = ({ onFilter }) => {
   const handleSelectAll = (): void => {
     if (isSelectAll) {
       setFilterState([]);
+      onFilter?.();
     } else {
       setFilterState(allOptionsFilter);
+      onFilter?.();
     }
   };
-
-  useEffect(() => {
-    onFilter?.();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filterState]);
 
   return (
     <div className="FilterCategory">
@@ -78,7 +75,13 @@ const FilterCategory: React.FC<TFilterCategoryProps> = ({ onFilter }) => {
               />
             </Col>
             <Col span={24}>
-              <MultipleCheckboxCollapse value={filterState} onChange={setFilterState} />
+              <MultipleCheckboxCollapse
+                value={filterState}
+                onChange={(data): void => {
+                  setFilterState(data);
+                  onFilter?.();
+                }}
+              />
             </Col>
           </Row>
         </div>

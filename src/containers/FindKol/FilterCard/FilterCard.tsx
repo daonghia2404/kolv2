@@ -121,7 +121,13 @@ const FilterCard: React.FC<TFilterCardProps> = ({ data = [], loading, onOpenFilt
                 {data
                   .filter((item: any) => !item.ad)
                   .map((item: any) => {
-                    return (
+                    const isAd = item.ad;
+
+                    return isAd ? (
+                      <Col key={item.id} span={24} md={{ span: 12 }}>
+                        <AdBlock />
+                      </Col>
+                    ) : (
                       <Col key={item.id} span={24} md={{ span: 12 }}>
                         <div className="FilterCard-list-item">
                           <KolCard

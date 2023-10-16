@@ -16,6 +16,7 @@ const InfoDetailKol: React.FC<TInfoDetailKolProps> = () => {
             Valentina
             <div className="InfoDetailKol-rank">
               <Image src={IconRankV} alt="" />
+              <span>Verified profile</span>
             </div>
           </div>
           <div className="InfoDetailKol-description flex items-center" style={{ marginBottom: '1rem' }}>

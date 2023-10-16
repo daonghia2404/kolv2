@@ -41,12 +41,12 @@ const FindKol: React.FC<TFindKolProps> = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    if (isVisibleLoadMoreEntry && !loading) {
-      getData();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isVisibleLoadMoreEntry]);
+  // useEffect(() => {
+  //   if (isVisibleLoadMoreEntry && !loading) {
+  //     getData();
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [isVisibleLoadMoreEntry]);
 
   useEffect(() => {
     getData();
@@ -68,8 +68,13 @@ const FindKol: React.FC<TFindKolProps> = () => {
           </Col>
           <Col span={8} className="FindKol-filter-category" />
           <Col span={24} lg={{ span: 16 }}>
-            <div className="FindKol-loadmore flex items-center justify-center" ref={loadMoreRef}>
-              Scroll down to load more
+            <div
+              className="FindKol-loadmore flex items-center justify-center cursor-pointer"
+              ref={loadMoreRef}
+              onClick={(): void => getData()}
+            >
+              {/* Scroll down to load more */}
+              Click to load more
               <Icon name={EIconName.DoubleAngleDown} color={EIconColor.LYNCH} />
             </div>
           </Col>
