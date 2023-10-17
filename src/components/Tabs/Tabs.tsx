@@ -6,12 +6,12 @@ import { removeParam } from '@/utils/functions';
 
 import { TTabsProps } from './Tabs.types.d';
 
-const Tabs: React.FC<TTabsProps> = ({ options = [], onKeyChange }) => {
+const Tabs: React.FC<TTabsProps> = ({ options = [], defaultKey, onKeyChange }) => {
   const key = 'tabKey';
   const router = useRouter();
   const { asPath } = router;
 
-  const [activeKey, setActiveKey] = useState<string | null>(null);
+  const [activeKey, setActiveKey] = useState<string | null>(defaultKey || null);
 
   const handleTabChange = (activeKeyChanged: string): void => {
     // router.push({ pathname: removeParam(asPath), query: { [key]: activeKeyChanged } });

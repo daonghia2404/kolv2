@@ -55,7 +55,7 @@ const FindKol: React.FC<TFindKolProps> = () => {
   return (
     <div ref={ref} className="FindKol">
       <div className="FindKol-wrapper">
-        <Row gutter={[32, 32]}>
+        <Row gutter={[24, 24]}>
           <Col span={8} className="FindKol-filter-category">
             <FilterCategory
               onFilter={(): void => {

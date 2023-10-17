@@ -32,7 +32,7 @@ const TabsKol: React.FC<TTabsKolProps> = () => {
 
   return (
     <div className="TabsKol">
-      <Tabs options={dataTabsKol} />
+      <Tabs defaultKey="schedule" options={dataTabsKol} />
     </div>
   );
 };

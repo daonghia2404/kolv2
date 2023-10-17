@@ -77,7 +77,7 @@ const FilterCard: React.FC<TFilterCardProps> = ({ data = [], loading, onOpenFilt
         <div className="FilterCard-body">
           {typeLayout === ETypeLayout.GRID && (
             <div className="FilterCard-grid">
-              <Row gutter={[16, 16]}>
+              <Row gutter={[24, 24]}>
                 {data.map((item: any) => {
                   const isAd = item.ad;
 
@@ -117,7 +117,7 @@ const FilterCard: React.FC<TFilterCardProps> = ({ data = [], loading, onOpenFilt
 
           {typeLayout === ETypeLayout.LIST && (
             <div className="FilterCard-list">
-              <Row gutter={[16, 16]}>
+              <Row gutter={[24, 24]}>
                 {data
                   .filter((item: any) => !item.ad)
                   .map((item: any) => {

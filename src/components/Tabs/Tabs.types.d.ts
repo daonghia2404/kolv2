@@ -1,5 +1,6 @@
 export type TTabsProps = {
   options?: TTabOption[];
+  defaultKey?: string;
   onKeyChange?: (key: string) => void;
 };
 
