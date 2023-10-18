@@ -1,0 +1,468 @@
+Introduction
+
+1. Details of the Controller
+
+2. Information on the Types of Data Processed and Their Origin
+
+   a. Types of Data That We Automatically Collect
+
+     During every visit of our Website:
+
+   b. Types of Data You Transmit to Us
+
+     i. User account / profile data:
+
+     ii. Optional Profile Information:
+
+     iii. Location Data:
+
+     iv. Communication Data: Users
+
+     v. Communication Data: Date-Manager
+
+     vi. Communication Data: Customer Service
+
+     vii. Data for Age and Photo Verification
+
+3. Processing Purposes & Legal Bases
+
+   purposes:
+
+   Your consent (Article 6 (1) lit. a & Article 9 (2) lit. a GDPR)
+
+   Fulfilment of contractual obligations (Article 6 (1) lit. b GDPR)
+
+   Protecting vital interests (Article 6 (1) lit. d GDPR)
+
+   Safeguarding legitimate interests (Article 6 (1) lit. f GDPR)
+
+   Legal requirements or in the public interest (Article 6 (1) lit. c & e GDPR)
+
+4. Data Transmission
+
+   a. To Other Users:
+
+   b. To Group Companies:
+
+   c. Third parties and Other Recipients:
+
+     Affiliate Systems & Ad Networks
+
+     Akismet Anti-Spam by Automattic, Inc.
+
+     Amazon S3
+
+     Atlassian
+
+     Public Authorities
+
+     Compay
+
+     Google
+
+     Kayako
+
+     Telestream
+
+     Twilio
+
+     Typeform
+
+5. Processing of Payment Data
+
+6. Information on Behavioural Advertising
+
+7. Transfer to Countries Outside the EU or the EEA
+
+8. How Long will my Data be Stored?
+
+9. Information on the Voluntary Nature of the Information Provided
+
+10. Information About Your Rights
+
+11. Information About Your Right of Objection
+
+   a. Right of Objection in Individual Cases
+
+   b. Right to Object to the Processing of Data for Advertising Purposes
+
+12. Amendment of the Privacy Statement
+
+ 
+
+Click here to open the configuration box or to change your cookie settings
+
+ 
+
+Introduction
+This Privacy Notice provides an overview of the processing of your personal data in the context of the use of the offers and online Services on our Website (hereinafter referred to as the ‘Service’).
+
+Furthermore, this Privacy Notice informs you about your rights and the possibilities you have to control your personal data and to protect your privacy.
+
+We have always taken the protection of your personal data very seriously and continuously take appropriate organisational, contractual and technical measures to protect your data from unauthorised or unlawful processing and against accidental loss, destruction or damage.
+
+ 
+
+1. Details of the Controller
+The data controller is Palace Betriebs AG, Bahnhofstrasse 19c, 6037 Root, Switzerland Please direct any general support requests to: support@6fuxxx.com).
+
+Ideawise Limited is also meant when the terms ‘we’ or ‘us’ are used below.  Please note that we are a company based outside the European Economic Area (‘EEA’). As far as you use our Service and data is processed, these data are collected by a data controller located in a so-called ‘Third Country’. Nonetheless, we will respect standards under applicable European data protection laws. Details about international data transfers can be found in section 7 below. You can contact our data protection officer at: dataprotection@6fuxxx.com support request will not be processed by the data protection team, please direct these requests to support@6fuxxx.com).
+
+ 
+
+2. Information on the Types of Data Processed and Their Origin
+If we provide the Service for your use, we process personal data from various sources. This is data that we collect automatically - for example when you visit our Website - as well as other data that you have additionally provided to us.
+
+ 
+
+a. Types of Data That We Automatically Collect
+When visiting our Website, you submit technical information to our servers. This happens regardless of whether you subsequently register an account with us to use the Service or not. In any case, the following data will be processed:
+
+- During every visit of our Website:
+
+The so-called server log. This is a file which stores the following data: the time, the status of your Website visit (status means in this case whether the request of the Website was successful or not) as well as the request that your browser has made to the server to open the page, the amount of data transferred and the Website from which you came to the requested page (referrer), and the product and version information of the browser used (user agent).
+
+If you create a profile on our Service, we will assign a so-called unique user ID to it. Besides your chosen profile name, the unchangeable Unique User ID allows us to uniquely identify your profile.
+
+ 
+
+b. Types of Data You Transmit to Us
+In addition to the data we receive from all Website visitors, we also process other data from registered users.
+
+The exact amount of this data depends on how you use the Service.
+
+Personal information that you publicly upload to your profile or other areas of the Service will be visible to other users (and searchable via the search feature within the Service), unless they are ignored/blocked. PLUS-members can define what user type and user location they are searchable for. When choosing additional settings for wider publication of your data, this information will also be accessible to users who are not logged in. This applies to Escort- and Business-Profiles only. Customers profiles are only displayed to logged-in users. These privacy settings / ‘search visibility’ can be determined by you in your profile settings.
+
+The data you provide to us include:
+
+ 
+
+i. User account / profile data:
+To use the Service, you can create a user account (a ‘Profile’). When you create a Profile, you must provide some mandatory information to complete the registration.
+
+Required area:
+
+Escort signup:
+Gender
+Email address
+Password
+Phone number
+User name
+Country
+City & zip code
+Origin
+Spoken languages
+Look
+Sexual orientation
+Birth date
+Height
+Weight
+Figure
+Cup size (only for female and transsexual escorts)
+Penis length (only for male and transsexual escorts)
+Penis girth (only for male and transsexual escorts)
+Hair length
+Hair color
+Body hair
+Pubic hair
+Preferred client gender
+Preferred client age
+Meeting options & radius
+Services (offering)
+Client signup:
+Gender
+Email address
+Password
+Phone number
+User name
+Country
+City & zip code
+Origin
+Spoken languages
+Look
+Sexual orientation
+Birth date
+Height
+Weight
+Figure
+Preferred escort gender
+Preferred escort age
+Meeting options & radius
+Services (looking for)
+Business signup:
+Business type
+Company name
+Street & number
+City & zip code
+Country
+User name
+Password
+Email address
+Phone number
+Services offering (not for Rent-by-hour-apartment, Bar/Nightclub, Swinger club, Porn cinema)
+Facilities & catering (not for Rent-by-hour-apartment & Escort agency)
+Spoken languages
+Prices
+Opening hours
+Company description
+ 
+
+ii. Optional Profile Information:
+The use of the Service is possible only with the aforementioned information. However, you may also provide additional personal information in your Profile, such as physical characteristics, personal interests or detailed information about your sexual preferences, political opinion or ideological beliefs. If you want to, you can upload photos and videos and assign different privacy settings to each upload. The scope of this optional data can be determined by you via the respective input fields in your Profile settings.
+
+ 
+
+iii. Location Data:
+When you use our Service, we determine your approximate location in order to facilitate contact with users nearby. This is generally done via your browser or device settings upon your explicit consent, and if you register, your profile location settings. You may change your location in profile or device settings.
+
+ 
+
+iv. Communication Data: Users
+If you communicate with other users of our Service, we save your conversations so that the conversation history with your chat partners can be permanently displayed, and conduct checks on certain keywords for the prevention of criminal activity .
+
+ 
+
+v. Communication Data: Date-Manager
+If you use the Date Manager to arrange meetings, the information exchanged is also stored for permanent display within your Date Manager. After a meeting which has been agreed with the Date Manager, both users can write a review about their experience on the date within 7 days. Each user can comment on or report the other's report or comment once. The reviews and comments will be published on both user profiles. Reports or comments may only be deleted in case of a violation of the rules.
+
+ 
+
+vi. Communication Data: Customer Service
+When you contact our Customer Service, written communications between you and the Service staff and notes on each transaction are stored so that you can always have a smooth Customer Service experience when the transaction is resumed by other Service staff.
+
+ 
+
+vii. Data for Age and Photo Verification:
+You have the following options for age verification:
+
+- Photo Verification / ID Verification
+
+For a forced photo verification, you may be asked by a service representative to upload a photo of yourself showing your face & hand, a note with the domain name of the Service, your username and the date of verification. You may also complete the photo check voluntarily.
+
+ 
+
+3. Processing Purposes & Legal Bases
+We process your data exclusively for the following defined
+
+purposes:
+- To allow you and other users to use the Service and to ensure its functionality
+
+- To provide you with additional Services that you have purchased
+
+- To keep you up to date with relevant information about our Service and to send you system notifications to the e-mail address you have provided.
+
+- To send our newsletter and other information about our Services to the provided e-mail address (such as for example about competitions/sweepstakes, discount campaigns, events, satisfaction surveys or other similar offerings of our online platforms)
+
+- To verify a profile on signup (Escort & Business profiles), or a phone number (Client profiles) via SMS, or to receive date requests and date updates via SMS (if this notification type is selected)
+
+- To adapt the provision of the Service to your needs
+
+- To display advertising tailored to your interests (including participation in sweepstakes)
+
+- To continuously improve the Service offer and to correct errors
+
+- To detect and prevent fraud attempts
+
+- To ensure the protection of minors
+
+- To enable the exchange with Customer Service in case of questions
+
+- To check information published on your profile or shared by you through the Service
+
+- To disclose your personal data to third parties if we are legally obliged to do so
+
+- To assert legal claims and to defend against legal disputes
+
+- To verify the plausibility of the entered data
+
+- To ensure IT security and smooth operation of IT systems
+
+- To assist the competent authorities in discovering and prosecuting criminal offences including, but not limited to, offences causing bodily injury or death of the victims
+
+In doing so, we rely on various legal bases in accordance with the so-called General Data Protection Regulation, a European Union legal framework for the standardisation of data protection law (‘GDPR’ for short). We refer in detail to the following legal bases:
+
+ 
+
+Your consent (Article 6 (1) lit. a & Article 9 (2) lit. a GDPR)
+When visiting the Website without registration, you agree to the cookie guidelines in the pop-up. If you have given us your consent to process personal data for specific purposes, this consent ensures the legality of the processing. By registering and creating your profile, you expressly agree to its use for the purposes described in detail in this Privacy Notice by ticking the box before submitting the registration form. So, if we process your data, it is because you have expressly allowed us to do so when you registered. Your consent is therefore the most important legal basis for the processing of your personal data by us. If you provide us with information about your sexual orientation or preferences, we will process this data exclusively on the basis of your consent.
+
+ 
+
+Fulfilment of contractual obligations (Article 6 (1) lit. b GDPR)  
+At the same time, the processing of personal data also takes place for the provision of the Service in the context of the performance of our contract with you. In many cases, the processing is not only justified by your consent, but also because it is necessary to fulfil our contract with you: In order to fulfill your claim, which is described in more detail in our General Terms and Conditions, to the service, it may be necessary to process your personal data. For example, you wish to pay for your PLUS-membership, the processing of your payment information is required.
+
+ 
+
+Protecting vital interests (Article 6 (1) lit. d GDPR)
+We invoke this legal basis in narrowly defined case constellations (e.g. reported suicide announcements) where the processing is necessary for the protection of the vital interests of the data subject or another natural person.
+
+ 
+
+Safeguarding legitimate interests (Article 6 (1) lit. f GDPR)
+By registering to use the Service, you consent to the processing of your data in accordance with this Privacy Notice. That is why we process your data in principle, because you have allowed us to do so. However, there are some cases in which we would be entitled to process your data without your consent because it is necessary to protect our legitimate interests (or the interests of third parties). In this respect, the purposes for which we process your data also represent legitimate interests. We pursue legitimate interests, for example, if we check images or texts for content relevant under applicable criminal law or if we take measures to secure our ‘virtual domiciliary rights’. In these cases, we will not ask you in advance whether you agree to this processing, since processing is otherwise permitted by law.
+
+ 
+
+Legal requirements or in the public interest (Article 6 (1) lit. c & e GDPR)
+In addition, we are legally obliged to provide certain information to criminal prosecution, tax or other authorities in individual cases upon request, if such processing is necessary for safeguarding public interest. Additionally, commercial and tax law contain such obligations for processing in some cases.
+
+ 
+
+4. Data Transmission
+We treat your personal data with care and confidentiality and will only pass them on to third parties and other recipients to the extent described below and not beyond.
+
+ 
+
+a. To Other Users:
+As our Service is a platform for getting to know each other, it is in the nature of things that we forward your profile data as well as other data (e.g. messages you send and other communication you have with other users and the community) at your request and on your behalf to the corresponding users of the Service.
+
+ 
+
+b. To Group Companies:
+We transfer data to affiliated companies which form part of the same group of companies as us within the framework of strict protection requirements. This is the case, for example, when you make a Customer Service request. We will then forward this request to SmH ServiceCenter.de GmbH, a service company associated with us. In addition, our development company, TheNetCircle Network Co. Ltd. as well as the payment / debt collection partners Compay GmbH and Faircollect GmbH and the community management and marketing at Playamedia S.L. receive the necessary information to ensure the security and functionality of the Service and the handling of payments.
+
+ 
+
+c. Third parties and Other Recipients:
+In addition, we transmit data to external service providers who enable us to provide the Service to you. These include hosting providers, delivery service providers, payment service providers and providers of analytics platforms. We require each of these service providers to comply with strict rules about the security of your personal information when processing personal information on our behalf. Such processing operations are therefore principally based on your explicit consent as well as contractual agreements guaranteeing an adequate level of protection for your data.
+
+Cloudflare
+
+We use the service of Cloudflare Inc., 101 Townsend St., San Francisco, CA 94107, USA (“Cloudflare”). Cloudflare provides a content delivery network (“CDN”) which allows the information transfer between your browser and our website and App to be conducted via the Cloudflare network. The integration of Cloudflare allows us to improve the worldwide website and App performance as well as analyze the data between user and our website in order to improve security and identify attacks on our services. Cloudflare may also collect certain information about the use of our website and process data that is sent by us or for which Cloudflare has received appropriate instructions. Therefore, the contents are not determined by Cloudflare but only by the website operator. The data received is such as contact information, IP addresses, Customer Logs and performance data for web pages derived from browser activity. Cloudflare processes this data within the framework of the services in compliance with the applicable laws. 
+
+The use of Cloudflare is based on our legitimate interest in a provision of our website and App offerings that is as error free and secure as possible, as well as allowing improvement of stability and functionality (Art. 6 (1)(f) GDPR).
+
+We have concluded a corresponding data processing agreement with Cloudflare based on the GDPR (which can be found here: https://www.cloudflare.com/cloudflare-customer-dpa/), which guarantees that Cloudflare processes personal data of our website visitors only based on our instructions and in compliance with the GDPR. This obliges Cloudflare to protect the visitor´s data and prevents the disclosure of the data to third parties. Data transmission to the US is based on the Standard Contractual Clauses (SCC) of the European Commission. Details can be found here: https://www.cloudflare.com/de-de/privacypolicy.
+
+Affiliate Systems & Ad Networks
+We use the following affiliate systems to attract new customers to our community. In doing so we measure success on the basis of registrations and revenue.
+ 
+
+- Google Adwords: We also use Google Adwords in conjunction with the Google Tag Manager to promote our site in Google search results and on third-party sites. Google (location USA) uses a remarketing cookie that contains a pseudonymous cookie ID and information about the use of our Website. This way, displayed ads are tailored towards your interests. Information on opt-out 
+
+ 
+
+- Hasoffers/TUNE (location USA) is an affiliate marketing platform that uses anonymised postback tracking as well as pixel tracking to track in-site user activity (e.g. purchase of memberships, picture uploads yes/no etc.) of a user that was acquired via the Hasoffers affiliate marketing platform. We use this service to understand how users acquired via this channel interact with our sites and to analyse the effectiveness of our Hasoffers campaigns. Further information and opt-out options
+
+ 
+
+Akismet Anti-Spam by Automattic, Inc.
+With the help of the Askimet Anti-Spam Plugin (located in USA) we can distinguish spam comments from comments of real people. The following information is transferred to analyse the behaviour of comments: the provided name, email address, IP address, the content of the comment, the referrer, information on the browser and computer system used and the time of submission. If you do not use the comment function in Kaufmich-Magazin, no data will be transmitted.
+
+ 
+
+Amazon S3
+This hosting service (processing in USA and Europe) is used by us to store and deliver videos and images.
+
+ 
+
+Atlassian
+Jira and Confluence are products of the company Atlassian (location USA) that we use for error prevention, troubleshooting and for project management. In principle, no personal data is transmitted, in rare circumstances, however, a username may be mentioned in a so-called ‘ticket’ in order to enable us to quickly resolve technical issues.
+
+ 
+
+Public Authorities
+We transmit data to authorities in the event of a legal obligation based on a request for information from the respective authority.
+
+ 
+
+Google
+Google LLC is a provider from the USA. Google Analytics is used to analyse the behavior of users of our Services. With the help of Google Captcha, we can determine whether a visitor is a human being or a machine for certain actions. YouTube videos are embedded in our Service in ‘advanced privacy mode’. While no Youtube cookies are set due to this particularly data protection-friendly method of embedding, opening the pages nevertheless leads to a connection being established with YouTube and the DoubleClick network. A click on the video can trigger further data processing operations over which we have no control. We use Google Maps to display members in the regional search on a map. We do not use the actual location of the user, but a location we have stored based on the postcode provided by the user. We use Gmail to ensure that we receive and reply to emails sent to dataprotection@6fuxxx.com. Information on opt-out options
+
+ 
+
+Kayako
+Kayako (location UK) is our system for dealing with customer queries. With each request the e-mail address, your preview profile picture and the username will be transmitted.
+
+ 
+
+Telestream
+Telestream (location USA) is a video streaming hosting provider that allows us to convert member uploaded videos into a format that can be played by everyone, and to add a 6fuxxx.com watermark. In order to be able to assign converted videos to the correct users, the Unique User ID is also transferred.
+
+ 
+
+Twilio
+We use Twilio (location USA) for our free SMS phone number verification and SMS notification service. If these features are used, the recipient's telephone number and the SMS text contents are transferred.
+
+ 
+
+Typeform
+With this survey feature (location Spain, adequate level of data protection) we improve and entertain our community through a permanent feedback survey, as well as regular quizzes, other surveys and evaluations. It depends on each survey which information is passed on to Typeform, furthermore you decide yourself what you enter here. Among other things, the nickname, gender, payment class, information about the device (operating system, model, manufacturer and mobile phone provider) as well as the location stored in the profile can be transmitted.
+
+ 
+
+5. Processing of Payment Data
+When purchasing on our Service through the Website, we transfer different information to our collection partners for each payment method. Our partners are Compay GmbH. Here you can find out which data this is for each desired payment method. 
+
+ 
+
+6. Information on Behavioural Advertising
+'Behavioral advertising’ means the use of tracking measures to determine the potential interest of users when it comes to advertisements, and to display these according to their interests. For this we use the following features: Profile type, Membership type, Preferences and Services, Number of Logins, Age, 18+ status.
+
+ 
+
+7. Transfer to Countries Outside the EU or the EEA
+All servers of the Service are located in the European Economic Area (‘EEA’), so your data do not leave the EEA from a technical perspective, instead the technical provision and processing of the data for the operation of the Service takes place in the EEA.
+
+However, when you submit information to us, it is legally collected by a data controller located in a country outside the EEA because we are based in Hong Kong (P.R. China). In addition, our development company is also based in China, from where it has technical access to the servers in the EEA in certain situations.
+
+According to the GDPR, there are special requirements for transfers of data to so-called ‘Third Countries’ that do not guarantee an adequate level of data protection, without applicable adequacy decisions and without specific guarantees to compensate for this deficit. This means that, from a European perspective, personal data and data subjects enjoy less protection and rights there.
+
+In specific countries where no adequate level of protection for personal data can be guaranteed, public sector bodies such as law enforcement agencies, as well as intelligence agencies may be able to access data under less strict requirements than within the territory of the EEA (including secret disclosures without any pre-notification to you). Further, it is likely that you will have no effective remedy to challenge such access to your personal data in or out of court. While you might find this acceptable, we strongly urge you to cautiously assess the level of protection you deem appropriate for the personal data we process when providing the Service to you.
+
+If, as a data controller, we transfer data to a third country, we generally guarantee an adequate level of data protection. This applies regardless of whether it is a transfer to an affiliated company or to another recipient (such as an external service provider acting as a data processor). In these cases, we will ensure that the transfer is either based on approved standard contractual clauses (as well as the prerequisite additional safeguards required under the Articles 44 and following of the GDPR), that there is an adequacy decision for the respective country, or that other appropriate safeguards such as binding corporate rules have been provided to guarantee an adequate level of data protection.
+
+However, please be reminded: When justifying the transfer of personal data to third countries we, first and foremost, rely on the informed explicit consent you have freely given to us when signing up for our Service (as per Article 49 (1) lit. a GDPR). Specifically, you consent to the transfer of the data mentioned in this Privacy Statement to the US, the UK as well as China. If you would like to suspend the third-country transfer of your personal data, you are free to not sign up for our Service or to close the account you have opened with us.
+
+ 
+
+8. How Long will my Data be Stored?
+We process and store your personal data for as long as it is necessary for the fulfilment of our contractual or legal obligations. Thus, we store the data in principle only as long as our contractual relationship with you exists and also after termination only as far as the laws of the Federal Republic of Switzerland and the People's Republic of China require this. If the data are no longer necessary for the fulfilment of such obligations, they shall be deleted regularly and without delay, unless their further processing is necessary for the protection of legitimate interests or for the preservation of evidence within the framework of rules of limitations. In this sense, in particular the storage of age and profile verification photos and videos is carried out expressly for the entire duration of the contract, since we hold this data in particular for the ongoing guarantee of the protection of minors and the prevention of fraud attempts.
+
+The data collected under 2.a are stored for 90 days. This storage period serves our protection against attacks on the systems of our Service, e.g. by so-called Distributed Denial of Service attacks, in which the systems are deliberately overloaded by a large number of accesses to our Service in order to interrupt the provision of our Service.
+
+ 
+
+9. Information on the Voluntary Nature of the Information Provided
+You are not legally obliged to provide us with the above data. In principle, the contractual relationship that you have entered into with us by agreeing to our General Terms and Conditions does not result in any obligation to provide this personal data. However, the transmission of the compulsory data is a basic requirement for a conclusion of a contract with us. In addition, if you do not provide us with certain information or if you object to its use, you may not be able to use the Service, or only to a limited extent. This is because the Service essentially only becomes ‘alive’ through the content posted by the users.
+
+ 
+
+10. Information About Your Rights
+You can assert the following rights:
+
+- Your right of access according to Article 15 GDPR,
+
+- Your right to rectification according to Article 16 GDPR,
+
+- Your right to erasure according to Article 17 GDPR,
+
+- Your right to restriction of processing according to Article 18 GDPR as well as
+
+- Your right to data portability according to Article 20 GDPR.
+
+If you have any questions in this regard, please contact customer service at support@6fuxxx.com.
+
+You can revoke your consent to the processing of personal data at any time.
+
+In addition, you have the right to lodge a complaint with the responsible data protection supervisory authority.
+
+ 
+
+11. Information About Your Right of Objection
+a. Right of Objection in Individual Cases
+In addition to the rights already mentioned, you have the right, for reasons arising from your particular situation, to object at any time to the processing of personal data relating to you on the basis of Article 6 (1) lit. e GDPR (‘public interest grounds’) or of Article 6 (1) lit. f GDPR (‘legitimate interests’). If you object, we will no longer process your personal data unless we can prove there the existence of compelling legitimate grounds for the processing which override the interests, rights and freedoms of the data subject or for the establishment, exercise or defence of legal claims.
+
+ 
+
+b. Right to Object to the Processing of Data for Advertising Purposes
+You also have the right to object at any time to the processing of your personal data for the purpose of direct marketing. If you object, we will no longer process your personal data.
+
+Please also note the information in Section 9 of this Privacy Policy: If we terminate the processing due to your objection, it may be that the Service can no longer be made available to you or only to a limited extent.
+
+The objection can be made in each case form-free and should be addressed to support@6fuxxx.com if possible.
+
+ 
+
+12. Amendment of the Privacy Statement
+We reserve the right to occasionally adapt parts of this Privacy Statement which do not require consent so that they always comply with the current legal requirements or to implement changes to our Services in the Privacy Statement, e.g. when introducing new Services. Your new visit will then be subject to the new privacy policy. If your prior consent is required for a change to our Services or for the introduction of a new Service, we will inform you in a timely manner and ask for your consent.
