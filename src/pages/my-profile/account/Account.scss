@@ -1,0 +1,172 @@
+@import '@/assets/styles/_global.scss';
+
+.Account {
+  .ProfileLayout {
+    &-body {
+      &-title {
+        .Select {
+          margin: -0.4rem -1.2rem;
+
+          .ant-select {
+
+            .ant-select-selection-item,
+            .ant-select-selection-placeholder {
+              padding-right: 2.4rem;
+            }
+
+            .ant-select-selector {
+              background: transparent;
+              color: $heather;
+            }
+
+            .ant-select-arrow {
+              svg path {
+                stroke: $heather;
+              }
+            }
+          }
+        }
+      }
+
+      &-description {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &-chart {
+    margin: 4rem -2rem 2rem;
+
+    canvas {
+      width: 100% !important;
+      height: 20rem !important;
+    }
+
+    .g2-tooltip {
+      padding: 0 !important;
+      min-width: 9rem !important;
+      background: transparent !important;
+    }
+
+    &-tooltip {
+      font-size: 1.2rem;
+      padding: .4rem 1rem;
+      background: $radical-red;
+      border-radius: 2.4rem;
+      color: $white;
+      text-align: center;
+      height: 3.2rem;
+    }
+  }
+
+  &-overview {
+    &-card {
+      position: relative;
+      height: 7.4rem;
+      border-radius: .8rem;
+      border: 1px solid $heather;
+      overflow: hidden;
+
+      &::before {
+        @include fullAbsolute;
+        content: '';
+        opacity: 0.4;
+        background: linear-gradient(180deg, rgba(#F51D1D, 0.5), rgba(#F51D1D, 0.3), transparent);
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 65%;
+        height: .4rem;
+        background: $radical-red;
+        border-radius: 0 0 1rem 1rem;
+        left: 50%;
+        top: 0;
+        z-index: 2;
+        transform: translate(-50%, 0);
+      }
+
+      &-title {
+        position: relative;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: $white;
+      }
+
+      &-value {
+        position: relative;
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1;
+        color: $radical-red;
+      }
+    }
+  }
+
+  &-listing {
+    &-card {
+      position: relative;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      height: 12rem;
+
+      &-title {
+        position: relative;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $white;
+        margin-bottom: 1rem;
+      }
+
+      &-value {
+        position: relative;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $white;
+      }
+
+      &-action {
+        height: 100%;
+
+        @media (max-width: 768px) {
+          row-gap: 2.4rem;
+        }
+
+        .Button {
+          width: 100%;
+
+          @media (min-width: 769px) {
+            &-wrapper {
+              column-gap: .6rem;
+              justify-content: flex-start;
+            }
+
+            .ant-btn {
+              font-size: 1.4rem;
+              height: 2.8rem;
+              padding: .1rem 2.4rem;
+              line-height: 1;
+              font-weight: 400;
+
+              .Icon {
+                width: 1.6rem;
+                height: 1.6rem;
+              }
+            }
+          }
+
+
+        }
+      }
+
+      &::before {
+        @include fullAbsolute;
+        content: '';
+        background: linear-gradient(97deg, #2C353D -9.49%, #434A50 124.29%);
+      }
+    }
+  }
+}

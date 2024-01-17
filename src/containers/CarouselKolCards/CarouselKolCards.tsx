@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import Carousels from '@/components/Carousels';
@@ -10,6 +10,7 @@ import { dataCarouselKolCards } from './CarouselKolCards.data';
 
 const CarouselKolCards: React.FC<TCarouselKolCardsProps> = () => {
   const router = useRouter();
+  const [isDragging, setIsDragging] = useState<boolean>(false);
 
   return (
     <div className="CarouselKolCards">
@@ -22,6 +23,7 @@ const CarouselKolCards: React.FC<TCarouselKolCardsProps> = () => {
           arrows
           autoplay
           slidesToShow={6}
+          onDragging={setIsDragging}
           responsive={[
             {
               breakpoint: 1600,
@@ -54,7 +56,7 @@ const CarouselKolCards: React.FC<TCarouselKolCardsProps> = () => {
               <KolCard
                 {...item}
                 onClick={(): void => {
-                  router.push(Paths.ProfileDetail('1'));
+                  if (!isDragging) router.push(Paths.ProfileDetail('1'));
                 }}
               />
             </div>

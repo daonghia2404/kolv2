@@ -29,6 +29,9 @@
 @import '@/components/TagSelect/TagSelect.scss';
 @import '@/components/DragDropImages/DragDropImages.scss';
 @import '@/components/Video/Video.scss';
+@import '@/components/Status/Status.scss';
+@import '@/components/Switch/Switch.scss';
+@import '@/components/AreaChart/AreaChart.scss';
 
 @import '@/containers/Header/Header.scss';
 @import '@/containers/Footer/Footer.scss';
@@ -46,11 +49,20 @@
 @import '@/containers/TabsKol/TableSchedules/TableSchedules.scss';
 @import '@/containers/TabsKol/Services/Services.scss';
 @import '@/containers/SignUpForm/StepReview/StepReview.scss';
+@import '@/containers/SideBar/SideBar.scss';
+@import '@/containers/NeedSupport/NeedSupport.scss';
+@import '@/containers/MyMedia/MyMedia.scss';
 
 @import '@/layouts/AuthLayout/AuthLayout.scss';
 @import '@/layouts/GuestLayout/GuestLayout.scss';
+@import '@/layouts/ProfileLayout/ProfileLayout.scss';
 
 @import '@/pages/profile/[id]/ProfileDetail.scss';
 @import '@/pages/login/Login.scss';
 @import '@/pages/sign-up/SignUp.scss';
 @import '@/pages/static/StaticContent.scss';
+@import '@/pages/my-profile/photo-video/PhotoVideo.scss';
+@import '@/pages/my-profile/payment-histories/PaymentHistories.scss';
+@import '@/pages/my-profile/listing/Listing.scss';
+@import '@/pages/my-profile/account/Account.scss';
+@import '@/pages/my-profile/buy-credits/BuyCredits.scss';

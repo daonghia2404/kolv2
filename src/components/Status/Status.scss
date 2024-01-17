@@ -1,0 +1,32 @@
+@import '@/assets/styles/_global.scss';
+
+.Status {
+  column-gap: .8rem;
+
+  &-icon {
+    .Icon {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  &-label {
+    font-size: 1.4rem;
+  }
+
+  &.SUCCESS {
+    .Status {
+      &-label {
+        color: $mountain-meadow;
+      }
+    }
+  }
+
+  &.ERROR {
+    .Status {
+      &-label {
+        color: $torch-red;
+      }
+    }
+  }
+}

@@ -28,6 +28,7 @@ const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({
   onLogout,
   onClose,
 }) => {
+  const router = useRouter();
   const trans = useTrans();
   const { asPath } = useRouter();
 
@@ -61,7 +62,12 @@ const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({
           {isLogged ? (
             <>
               <Col flex={1}>
-                <div className="Header-account flex items-center">
+                <div
+                  className="Header-account flex items-center"
+                  onClick={(): void => {
+                    router.push(Paths.MyAccount);
+                  }}
+                >
                   <div className="Header-account-avatar">
                     <Avatar size={44} image={ImageAvatar} />
                   </div>
@@ -91,7 +97,10 @@ const DrawerMenuMobile: React.FC<TDrawerMenuMobileProps> = ({
           ) : (
             <>
               <Col span={24}>
-                <Input placeholder={trans?.header?.username} prefix={<Icon name={EIconName.UserKey} color={EIconColor.PALE_SKY} />} />
+                <Input
+                  placeholder={trans?.header?.username}
+                  prefix={<Icon name={EIconName.UserKey} color={EIconColor.PALE_SKY} />}
+                />
               </Col>
               <Col span={24}>
                 <Input

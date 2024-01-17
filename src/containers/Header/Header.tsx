@@ -116,7 +116,12 @@ const Header: React.FC<THeaderProps> = () => {
                   {isLogged ? (
                     <>
                       <Col>
-                        <div className="Header-account flex items-center">
+                        <div
+                          className="Header-account flex items-center"
+                          onClick={(): void => {
+                            router.push(Paths.MyAccount);
+                          }}
+                        >
                           <div className="Header-account-avatar">
                             <Avatar size={44} image={ImageAvatar} />
                           </div>
@@ -173,7 +178,11 @@ const Header: React.FC<THeaderProps> = () => {
                             />
                           </Col>
                           <Col>
-                            <Button title={trans?.header?.signup} styleType={EButtonStyleType.OUTLINE_RED} link={Paths.SignUp} />
+                            <Button
+                              title={trans?.header?.signup}
+                              styleType={EButtonStyleType.OUTLINE_RED}
+                              link={Paths.SignUp}
+                            />
                           </Col>
                         </>
                       )}
@@ -190,7 +199,11 @@ const Header: React.FC<THeaderProps> = () => {
                       )}
 
                       {isLoginPage && (
-                        <Button title={trans?.header?.signup} styleType={EButtonStyleType.OUTLINE_RED} link={Paths.SignUp} />
+                        <Button
+                          title={trans?.header?.signup}
+                          styleType={EButtonStyleType.OUTLINE_RED}
+                          link={Paths.SignUp}
+                        />
                       )}
                     </>
                   )}

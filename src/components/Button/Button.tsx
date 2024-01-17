@@ -26,6 +26,8 @@ const Button: React.FC<TButtonProps> = ({
   badgeTextColor,
   active,
   style,
+  secondIconName,
+  secondIconColor,
   onClick,
 }) => {
   const router = useRouter();
@@ -62,6 +64,11 @@ const Button: React.FC<TButtonProps> = ({
                 </div>
               )}
               {title && <span className="Button-title">{title}</span>}
+              {secondIconName && (
+                <div className="Button-icon">
+                  <Icon name={secondIconName} color={secondIconColor} />
+                </div>
+              )}
             </>
           )}
 

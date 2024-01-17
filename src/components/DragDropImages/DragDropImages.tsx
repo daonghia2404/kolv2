@@ -14,9 +14,11 @@ const DragDropImages: React.FC<TDragDropImagesProps> = ({
   value = [],
   multiple,
   description,
-  onChange,
+  accept = '.png,.jpg,.jpeg,.heic',
   maxCount,
   disabled,
+  customChildren,
+  onChange,
 }) => {
   const isSingleUpload = !multiple && maxCount === 1;
 
@@ -52,19 +54,23 @@ const DragDropImages: React.FC<TDragDropImagesProps> = ({
 
       <DraggerModify
         fileList={[]}
-        accept=".png,.jpg,.jpeg,.heic"
+        accept={accept}
         multiple={multiple}
         onChange={handleUploadVideo}
         disabled={disabled}
         maxCount={maxCount}
       >
-        <div className="DragDropImages-wrapper">
-          <div className="DragDropImages-icon">
-            <Icon name={EIconName.Upload} color={EIconColor.LYNCH} />
+        {customChildren ? (
+          customChildren
+        ) : (
+          <div className="DragDropImages-wrapper">
+            <div className="DragDropImages-icon">
+              <Icon name={EIconName.Upload} color={EIconColor.LYNCH} />
+            </div>
+            <div className="DragDropImages-title">Select a file or drag and drop here</div>
+            <div className="DragDropImages-description">{description}</div>
           </div>
-          <div className="DragDropImages-title">Select a file or drag and drop here</div>
-          <div className="DragDropImages-description">{description}</div>
-        </div>
+        )}
       </DraggerModify>
     </div>
   );

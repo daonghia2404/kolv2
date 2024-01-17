@@ -103,6 +103,18 @@
     }
   }
 
+  &.OUTLINE_LYNCH {
+    .ant-btn {
+      border: 1px solid $lynch;
+      background: transparent;
+      color: $lynch;
+
+      &:hover {
+        background: rgba($lynch, 0.2);
+      }
+    }
+  }
+
   &.TEXT_RED {
     .ant-btn {
       border: none;
@@ -123,6 +135,18 @@
 
       &:hover {
         color: darken($heather, 10%);
+      }
+    }
+  }
+
+  &.TEXT_PALE_SKY {
+    .ant-btn {
+      border: none;
+      background: transparent;
+      color: $pale-sky;
+
+      &:hover {
+        color: lighten($pale-sky, 10%);
       }
     }
   }

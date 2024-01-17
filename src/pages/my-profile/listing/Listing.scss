@@ -1,0 +1,24 @@
+@import '@/assets/styles/_global.scss';
+
+.Listing {
+  &-action {
+    .Button {
+      &-wrapper {
+        column-gap: .6rem;
+      }
+
+      .ant-btn {
+        font-size: 1.4rem;
+        height: 2.8rem;
+        padding: .1rem .8rem;
+        line-height: 1;
+        font-weight: 400;
+
+        .Icon {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
+  }
+}

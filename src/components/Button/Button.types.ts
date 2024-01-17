@@ -15,10 +15,12 @@ export type TButtonProps = {
   htmlType?: ButtonHTMLType;
   size?: SizeType;
   styleType?: EButtonStyleType;
-  iconName?: EIconName;
   danger?: boolean;
   link?: string;
+  iconName?: EIconName;
   iconColor?: EIconColor;
+  secondIconName?: EIconName;
+  secondIconColor?: EIconColor;
   reverse?: boolean;
   disabled?: boolean;
   loading?: boolean;

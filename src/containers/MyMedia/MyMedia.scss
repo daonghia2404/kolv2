@@ -1,0 +1,100 @@
+@import '@/assets/styles/_global.scss';
+
+.MyMedia {
+
+  &-filter {
+    margin-bottom: 2.4rem;
+    column-gap: .8rem;
+
+    &-title {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $lynch;
+    }
+
+    &-action {
+      column-gap: .8rem;
+
+      .Button {
+        .ant-btn {
+          padding: .4rem .8rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+        }
+
+        &:hover,
+        &.active {
+          .ant-btn {
+            color: $white;
+          }
+
+          @include iconColor($white);
+        }
+      }
+    }
+  }
+
+  &-list {
+    @media (max-width: 1200px) {
+      &>.ant-row {
+        margin-left: -0.6rem !important;
+        margin-right: -0.6rem !important;
+
+        &>.ant-col {
+          padding-left: 0.6rem !important;
+          padding-right: 0.6rem !important;
+        }
+      }
+    }
+
+    &-item {
+      position: relative;
+      border-radius: 1.6rem;
+      overflow: hidden;
+      @include centerScaleImage;
+      cursor: pointer;
+      transition: $common-transition;
+      height: 21.6rem;
+
+      @media (max-width: 1200px) {
+        height: calc(100vw / 4 - 1.2rem * 2)
+      }
+
+      @media (max-width: 575px) {
+        height: calc(100vw / 2 - 2.4rem * 2)
+      }
+
+      &:hover {
+        .MyMedia-list-item {
+          &-overlay {
+            opacity: 1;
+          }
+        }
+      }
+
+      &-overlay {
+        @include fullAbsolute;
+        color: $white;
+        font-weight: 600;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+        z-index: 4;
+        opacity: 0;
+        transition: $common-transition;
+
+        &-remove {
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: $torch-red;
+          column-gap: .4rem;
+
+          .Icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            flex: 0 0 2.4rem;
+            max-width: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+}

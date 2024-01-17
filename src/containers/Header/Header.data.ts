@@ -40,4 +40,10 @@ export const dataHeaderChildPageMenu = (data: any) => [
     activePaths: [Paths.SignUp],
     backPath: Paths.Home,
   },
+  {
+    id: 'my-profile-photo-video',
+    title: data?.trans?.header?.profile,
+    activePaths: [Paths.MyPhotoVideo],
+    backPath: Paths.Home,
+  },
 ];

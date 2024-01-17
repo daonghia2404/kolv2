@@ -50,6 +50,19 @@ export enum EIconName {
   Upload = 'Upload',
   Reload = 'Reload',
   Wifi = 'Wifi',
+  Coin = 'Coin',
+  Mail2 = 'Mail2',
+  Upload2 = 'Upload2',
+  Photo = 'Photo',
+  Video = 'Video',
+  Trash = 'Trash',
+  Gear = 'Gear',
+  Invoice = 'Invoice',
+  CheckCircle = 'CheckCircle',
+  Pencil = 'Pencil',
+  Trash2 = 'Trash2',
+  Fire = 'Fire',
+  Eye = 'Eye',
 }
 
 export enum EIconColor {
@@ -66,4 +79,5 @@ export enum EIconColor {
   OSLO_GRAY = '#96999C',
   LIMED_SPRUCE = '#3C4853',
   SCREAMIN_GREEN = '#58FF55',
+  TORCH_RED = '#FF1B29',
 }

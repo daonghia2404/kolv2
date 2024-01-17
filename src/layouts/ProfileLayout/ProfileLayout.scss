@@ -1,0 +1,68 @@
+@import '@/assets/styles/_global.scss';
+
+.ProfileLayout {
+  padding-bottom: 4.8rem;
+
+  &-wrapper {
+    column-gap: 2.4rem;
+    row-gap: 2.4rem;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      &:first-child {
+        flex: 0 0 34.5rem;
+        max-width: 34.5rem;
+      }
+
+      &:last-child {
+        flex: 1;
+      }
+
+      @media (max-width: 1200px) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+
+  .NeedSupport {
+    margin-top: 2.4rem;
+
+    @media (max-width: 1200px) {
+      margin-top: 0;
+    }
+  }
+
+  &-body {
+    border-radius: 2.4rem;
+    background: $outer-space;
+    padding: 4rem;
+    box-shadow: 0px 12px 24px 0px rgba(38, 38, 38, 0.50);
+
+    @media (max-width: 1200px) {
+      padding: 3.2rem 2.4rem;
+    }
+
+    &-title {
+      font-size: 2rem;
+      color: $white;
+      font-weight: 700;
+      margin-bottom: 2.4rem;
+    }
+
+    &-subtitle {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: $white;
+    }
+
+    &-description {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $heather;
+    }
+  }
+}

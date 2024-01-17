@@ -55,6 +55,19 @@ import Calendar from './Calendar';
 import Upload from './Upload';
 import Reload from './Reload';
 import Wifi from './Wifi';
+import Coin from './Coin';
+import Mail2 from './Mail2';
+import Upload2 from './Upload2';
+import Photo from './Photo';
+import Video from './Video';
+import Trash from './Trash';
+import Gear from './Gear';
+import Invoice from './Invoice';
+import CheckCircle from './CheckCircle';
+import Pencil from './Pencil';
+import Trash2 from './Trash2';
+import Fire from './Fire';
+import Eye from './Eye';
 
 const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) => {
   const renderIcon = (): React.ReactElement => {
@@ -161,6 +174,32 @@ const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) 
         return <Reload color={color} />;
       case EIconName.Wifi:
         return <Wifi color={color} />;
+      case EIconName.Coin:
+        return <Coin color={color} />;
+      case EIconName.Mail2:
+        return <Mail2 color={color} />;
+      case EIconName.Upload2:
+        return <Upload2 color={color} />;
+      case EIconName.Photo:
+        return <Photo color={color} />;
+      case EIconName.Video:
+        return <Video color={color} />;
+      case EIconName.Trash:
+        return <Trash color={color} />;
+      case EIconName.Gear:
+        return <Gear color={color} />;
+      case EIconName.Invoice:
+        return <Invoice color={color} />;
+      case EIconName.CheckCircle:
+        return <CheckCircle color={color} />;
+      case EIconName.Pencil:
+        return <Pencil color={color} />;
+      case EIconName.Trash2:
+        return <Trash2 color={color} />;
+      case EIconName.Fire:
+        return <Fire color={color} />;
+      case EIconName.Eye:
+        return <Eye color={color} />;
 
       default:
         return <></>;

@@ -1,0 +1,58 @@
+@import '@/assets/styles/_global.scss';
+
+.PhotoVideo {
+  &-upload {
+    .DragDropImages .ant-upload.ant-upload-drag {
+      border-radius: 2.4rem;
+    }
+
+    &-wrapper {
+      text-align: center;
+    }
+
+    &-title {
+      font-size: 3.2rem;
+      font-weight: 500;
+      color: $heather;
+    }
+
+    &-description {
+      font-size: 1.6rem;
+      color: $lynch;
+    }
+
+    &-hint {
+      font-size: 1.4rem;
+      color: $heather;
+      padding: 2rem 3.2rem;
+
+      @media (max-width: 1200px) {
+        padding: 2rem 0;
+      }
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 1.8rem;
+        }
+      }
+
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    &-btn {
+      width: 16rem;
+      margin: 2.4rem auto 0;
+
+      .Button {
+        .ant-btn {
+          height: 5.6rem;
+          font-size: 1.4rem;
+          font-weight: 600;
+          border-radius: 1.6rem;
+        }
+      }
+    }
+  }
+}

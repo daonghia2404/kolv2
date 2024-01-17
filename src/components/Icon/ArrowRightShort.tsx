@@ -12,6 +12,7 @@ const Svg: React.FC<TIconProps> = ({ color = EIconColor.BLACK }) => {
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
+        className="stroke"
       />
     </svg>
   );

@@ -1,0 +1,28 @@
+@import '@/assets/styles/_global.scss';
+
+.Switch {
+  .ant-switch {
+    width: 3.6rem;
+    height: 2rem;
+    min-width: auto;
+    background: $heather;
+
+    .ant-switch-handle {
+      top: .19rem;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    &.ant-switch-checked {
+      background: $radical-red;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      .ant-switch-handle {
+        left: calc(100% - 1.6rem - 2px);
+      }
+    }
+  }
+}

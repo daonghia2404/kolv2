@@ -361,7 +361,15 @@ const createServiceFile = (args) => {
 
   const pathArgs = endpointSplitted.filter((item) => item[0] === '{' && item[item.length - 1] === '}');
   const notHaveAnyPathArgs = arrayIsEmpty(pathArgs);
-  const endpointJSSyntax = endpointSplitted.join('/');
+  const endpointJSSyntax = endpointSplitted
+    .map((item) => {
+      if (item[0] === '{' && item[item.length - 1] === '}') {
+        return `$${item}`;
+      }
+
+      return item;
+    })
+    .join('/');
 
   const importScope = `import ${fromKebabToPascalCase(service)}Service from '@/services/${service}';`;
 
@@ -371,7 +379,7 @@ const createServiceFile = (args) => {
         material === API_MATERIALS.PATHS && !notHaveAnyPathArgs
           ? `
           export type T${pascalCaseActionName}${capitalize(material)} = {
-            ${pathArgs.map((arg) => `${removeFirstAndLastCharater(arg)}: string | number`).join(';')};
+            ${pathArgs.map((arg) => `${removeFirstAndLastCharater(arg)?.split('?.')?.pop()}: string | number`).join(';')};
           }`
           : `export type T${pascalCaseActionName}${capitalize(material)} = unknown`,
       )

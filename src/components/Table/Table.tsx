@@ -59,9 +59,9 @@ const Table: React.FC<TTableProps> = ({
 
         <AntdTable
           locale={{
-            cancelSort: 'Hủy sắp xếp',
-            triggerDesc: 'Sắp xếp giảm dần',
-            triggerAsc: 'Sắp xếp tăng dần',
+            // cancelSort: 'Hủy sắp xếp',
+            // triggerDesc: 'Sắp xếp giảm dần',
+            // triggerAsc: 'Sắp xếp tăng dần',
             emptyText: <Empty />,
           }}
           rowClassName={(record, index): string =>
@@ -79,18 +79,7 @@ const Table: React.FC<TTableProps> = ({
       </div>
 
       {!!showPagination && !!pageSize && !!total && (
-        <div className="Table-footer flex items-center justify-between">
-          <div className="Table-footer-perpage flex items-center">
-            Hiển thị / trang
-            <Select
-              options={dataTablePerPageOptions}
-              size="small"
-              value={dataTablePerPageOptions.find((option) => Number(option.value) === pageSize)}
-              onChange={(data): void => {
-                onPaginationChange?.(DEFAULT_PAGE, Number(data?.value), sorting);
-              }}
-            />
-          </div>
+        <div className="Table-footer">
           {totalPage > 1 && (
             <div className="Table-footer-pagination">
               <Pagination

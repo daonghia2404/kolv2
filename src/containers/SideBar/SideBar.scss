@@ -1,0 +1,143 @@
+@import '@/assets/styles/_global.scss';
+
+.SideBar {
+  border-radius: 2.4rem;
+  overflow: hidden;
+  background: rgba(44, 53, 61, 0.61);
+
+  &-account {
+    background: $outer-space;
+    padding: 2.4rem;
+    column-gap: 1.2rem;
+
+    &-menu {
+      .Button {
+        .ant-btn {
+          .Icon {
+            width: 3.6rem;
+            height: 3.6rem;
+          }
+        }
+      }
+    }
+
+    &-avatar {
+      position: relative;
+
+      .Avatar {
+        .ant-avatar {
+          border: 1px solid $radical-red;
+        }
+      }
+
+      &-verify {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        @include centerOriginImage;
+      }
+    }
+
+    &-info {
+      flex: 1;
+
+      &-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $white;
+        column-gap: .8rem;
+      }
+
+      &-description {
+        font-size: 1.6rem;
+        color: $heather;
+        column-gap: .8rem;
+      }
+
+      &-verify {
+        flex: 0 0 2.4rem;
+        max-width: 2.4rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        @include centerOriginImage;
+      }
+
+      &-credits {
+        .Icon {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+  }
+
+  &-menu {
+    padding: 2.4rem;
+
+    &-item {
+      padding: 1.2rem 1.2rem;
+      height: 4.8rem;
+      font-size: 1.6rem;
+      color: $heather;
+      font-weight: 600;
+      border-radius: .8rem;
+      cursor: pointer;
+      transition: $common-transition;
+
+      &:hover,
+      &.active {
+        color: $white;
+        background: $radical-red;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: .8rem;
+      }
+    }
+  }
+}
+
+
+.DrawerSideBarMobile {
+  .SideBar {
+    &-menu {
+      padding: 4.8rem 0;
+    }
+  }
+  .ant-drawer-content {
+    background: $shark;
+
+    .ant-drawer-header {
+      background: transparent;
+      padding: 0;
+    }
+
+    .ant-drawer-body {
+      padding: 3.2rem;
+    }
+
+    .ant-drawer-close {
+      position: absolute;
+      top: 2.4rem;
+      right: 2.4rem;
+      margin: 0;
+
+      &:hover {
+        .Icon {
+          background: rgba($white, 0.1);
+        }
+      }
+
+      .Icon {
+        width: 3.6rem;
+        height: 3.6rem;
+        background: rgba($white, 0.05);
+        border-radius: .8rem;
+        transition: $common-transition;
+      }
+    }
+  }
+}

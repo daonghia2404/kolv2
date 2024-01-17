@@ -229,3 +229,15 @@ body {
     }
   }
 }
+
+.ant-tooltip {
+  .ant-tooltip-arrow {
+    display: none;
+  }
+
+  .ant-tooltip-inner {
+    border-radius: .8rem;
+    background: $shark;
+    font-size: 1.4rem;
+  }
+}
