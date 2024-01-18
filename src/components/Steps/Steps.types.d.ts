@@ -1,6 +1,7 @@
 export type TStepsProps = {
   value?: TStepsOption;
   options?: TStepsOption[];
+  lineWidth?: string | number;
   onChange?: (data: TStepsOption) => void;
 };
 

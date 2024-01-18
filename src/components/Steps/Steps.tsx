@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import { TStepsProps } from './Steps.types.d';
 
-const Steps: React.FC<TStepsProps> = ({ options = [], value, onChange }) => {
+const Steps: React.FC<TStepsProps> = ({ options = [], value, onChange, lineWidth }) => {
   const passIndexStep = options.findIndex((option) => option.id === value?.id);
   const activeStep = options.find((option) => option.id === value?.id);
 
@@ -14,7 +14,7 @@ const Steps: React.FC<TStepsProps> = ({ options = [], value, onChange }) => {
 
   return (
     <div className="Steps">
-      <div className="Steps-step flex items-center justify-center flex-wrap">
+      <div className="Steps-step flex items-center justify-between">
         {options.map((item, index) => {
           return (
             <>
@@ -29,9 +29,18 @@ const Steps: React.FC<TStepsProps> = ({ options = [], value, onChange }) => {
                 }}
               >
                 {index + 1}
+                {item?.title && <div className="Steps-step-item-title">{item.title}</div>}
               </div>
               {index < options.length - 1 && (
-                <div key={item.id} className={classNames('Steps-step-item-line', { active: index < passIndexStep })} />
+                <div
+                  key={item.id}
+                  className={classNames('Steps-step-item-line', { active: index < passIndexStep })}
+                  style={{
+                    flex: `0 0 ${lineWidth || `calc(100% / ${options.length})`}`,
+                    width: `${lineWidth || `calc(100% / ${options.length})`}`,
+                    maxWidth: `${lineWidth || `calc(100% / ${options.length})`}`,
+                  }}
+                />
               )}
             </>
           );

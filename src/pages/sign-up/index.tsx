@@ -72,6 +72,7 @@ const SignUp = () => {
       <div className="SignUp-wrapper">
         <div className="AuthLayout-card">
           <Steps
+            lineWidth="3rem"
             options={dataStep}
             value={stepState.currentStep}
             onChange={(stepChanged): void => setStepState({ ...stepState, currentStep: stepChanged })}

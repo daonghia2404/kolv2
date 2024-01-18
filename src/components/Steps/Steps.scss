@@ -7,6 +7,7 @@
     margin-bottom: 2.4rem;
 
     &-item {
+      position: relative;
       flex: 0 0 4.4rem;
       max-width: 4.4rem;
       height: 4.4rem;
@@ -19,10 +20,39 @@
       transition: $common-transition;
       user-select: none;
 
+      &:first-child {
+        .Steps-step-item {
+          &-title {
+            left: 0;
+            transform: none;
+            text-align: left;
+          }
+        }
+      }
+
+      &:last-child {
+        .Steps-step-item {
+          &-title {
+            right: 0;
+            left: unset;
+            transform: none;
+            text-align: right;
+          }
+        }
+      }
+
+      &-title {
+        position: absolute;
+        top: calc(100% + 1.2rem);
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        color: $white;
+        font-weight: 600;
+        text-align: center;
+      }
+
       &-line {
-        flex: 0 0 3rem;
-        width: 3rem;
-        max-width: 3rem;
         height: .5rem;
         border-radius: 3rem;
         background: $heather;

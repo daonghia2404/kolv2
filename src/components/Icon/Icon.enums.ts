@@ -63,6 +63,11 @@ export enum EIconName {
   Trash2 = 'Trash2',
   Fire = 'Fire',
   Eye = 'Eye',
+  CoinBronze = 'CoinBronze',
+  CoinSilver = 'CoinSilver',
+  CoinRed = 'CoinRed',
+  ShieldSsl = 'ShieldSsl',
+  MasterCard = 'MasterCard',
 }
 
 export enum EIconColor {

@@ -68,6 +68,11 @@ import Pencil from './Pencil';
 import Trash2 from './Trash2';
 import Fire from './Fire';
 import Eye from './Eye';
+import CoinBronze from './CoinBronze';
+import CoinSilver from './CoinSilver';
+import CoinRed from './CoinRed';
+import ShieldSsl from './ShieldSsl';
+import MasterCard from './MasterCard';
 
 const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) => {
   const renderIcon = (): React.ReactElement => {
@@ -200,6 +205,16 @@ const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) 
         return <Fire color={color} />;
       case EIconName.Eye:
         return <Eye color={color} />;
+      case EIconName.CoinBronze:
+        return <CoinBronze color={color} />;
+      case EIconName.CoinSilver:
+        return <CoinSilver color={color} />;
+      case EIconName.CoinRed:
+        return <CoinRed color={color} />;
+      case EIconName.ShieldSsl:
+        return <ShieldSsl color={color} />;
+      case EIconName.MasterCard:
+        return <MasterCard color={color} />;
 
       default:
         return <></>;
