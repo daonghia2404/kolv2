@@ -96,6 +96,7 @@ const StepPayment: React.FC<TStepPaymentProps> = ({ onPrev, onNext }) => {
         <div className="BuyCredits-accept flex justify-center" style={{ marginTop: '2.4rem' }}>
           <Form.Item name="accept">
             <Checkbox
+              lighten
               label={
                 <span style={{ color: EIconColor.HEATHER }}>
                   By making a purchase, you accept out General{' '}

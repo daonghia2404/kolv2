@@ -22,8 +22,8 @@ export const dataSideBarMenu = () => [
   {
     key: '4',
     title: 'Create Listing',
-    link: '#',
-    activePaths: [],
+    link: Paths.CreateListing,
+    activePaths: [Paths.CreateListing],
   },
   {
     key: '5',

@@ -5,14 +5,14 @@ import { CheckboxChangeEvent } from 'antd/lib/checkbox';
 
 import { TCheckboxProps } from './Checkbox.types';
 
-const Checkbox: React.FC<TCheckboxProps> = ({ className, label, size, onChange, value }) => {
+const Checkbox: React.FC<TCheckboxProps> = ({ className, label, size, onChange, lighten, value }) => {
   const handleCheckboxChange = (e: CheckboxChangeEvent): void => {
     const { checked } = e.target;
     onChange?.(checked);
   };
 
   return (
-    <div className={classNames('Checkbox', className, size)}>
+    <div className={classNames('Checkbox', className, size, { lighten })}>
       <AntdCheckbox checked={value} onChange={handleCheckboxChange}>
         {label}
       </AntdCheckbox>

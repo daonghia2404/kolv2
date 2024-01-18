@@ -68,6 +68,17 @@ export enum EIconName {
   CoinRed = 'CoinRed',
   ShieldSsl = 'ShieldSsl',
   MasterCard = 'MasterCard',
+  CheckCircleColor = 'CheckCircleColor',
+  Info = 'Info',
+  FlagUsa = 'FlagUsa',
+  Telegram = 'Telegram',
+  WhatApps = 'WhatApps',
+  Website = 'Website',
+  OnlyFan = 'OnlyFan',
+  Twitter = 'Twitter',
+  Instagram = 'Instagram',
+  HandFinger = 'HandFinger',
+  CalendarCheck = 'CalendarCheck',
 }
 
 export enum EIconColor {

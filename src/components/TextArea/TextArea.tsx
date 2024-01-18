@@ -42,6 +42,7 @@ const TextArea: React.FC<TTextAreaProps> = ({
         maxLength={maxLength}
         showCount={showCount}
       />
+      {suffix && <div className="TextArea-suffix">{suffix}</div>}
     </div>
   );
 };

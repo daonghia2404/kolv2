@@ -16,4 +16,5 @@ export const Paths = {
   MyListing: `${ModulePaths.MyProfile}/listing`,
   MyAccount: `${ModulePaths.MyProfile}/account`,
   BuyCredits: `${ModulePaths.MyProfile}/buy-credits`,
+  CreateListing: `${ModulePaths.MyProfile}/create-listing`,
 };

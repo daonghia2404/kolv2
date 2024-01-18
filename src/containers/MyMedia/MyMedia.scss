@@ -10,6 +10,10 @@
       font-size: 1.4rem;
       font-weight: 500;
       color: $lynch;
+
+      span {
+        color: $radical-red;
+      }
     }
 
     &-action {
@@ -55,6 +59,7 @@
       cursor: pointer;
       transition: $common-transition;
       height: 21.6rem;
+      border: 1px solid transparent;
 
       @media (max-width: 1200px) {
         height: calc(100vw / 4 - 1.2rem * 2)
@@ -62,6 +67,10 @@
 
       @media (max-width: 575px) {
         height: calc(100vw / 2 - 2.4rem * 2)
+      }
+
+      &.active {
+        border-color: $radical-red;
       }
 
       &:hover {
@@ -96,5 +105,9 @@
         }
       }
     }
+  }
+
+  &-view-more {
+    margin-top: 2rem;
   }
 }

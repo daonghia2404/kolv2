@@ -33,6 +33,7 @@
 @import '@/components/Switch/Switch.scss';
 @import '@/components/AreaChart/AreaChart.scss';
 @import '@/components/CreditCard/CreditCard.scss';
+@import '@/components/PlanCard/PlanCard.scss';
 
 @import '@/containers/Header/Header.scss';
 @import '@/containers/Footer/Footer.scss';
@@ -53,6 +54,8 @@
 @import '@/containers/SideBar/SideBar.scss';
 @import '@/containers/NeedSupport/NeedSupport.scss';
 @import '@/containers/MyMedia/MyMedia.scss';
+@import '@/containers/StepCreateListing/StepContact/StepContact.scss';
+@import '@/containers/StepCreateListing/StepPublish/StepPublish.scss';
 
 @import '@/layouts/AuthLayout/AuthLayout.scss';
 @import '@/layouts/GuestLayout/GuestLayout.scss';
@@ -67,3 +70,4 @@
 @import '@/pages/my-profile/listing/Listing.scss';
 @import '@/pages/my-profile/account/Account.scss';
 @import '@/pages/my-profile/buy-credits/BuyCredits.scss';
+@import '@/pages/my-profile/create-listing/CreateListing.scss';

@@ -1,3 +1,45 @@
 @import '@/assets/styles/_global.scss';
 
-.TextArea {}
+.TextArea {
+  position: relative;
+
+  &-prefix,
+  &-suffix {
+    position: absolute;
+    font-size: 1.6rem;
+    color: $lynch;
+    z-index: 2;
+  }
+
+  &-prefix {
+    top: 1.2rem;
+    left: 1.2rem;
+  }
+
+  &-suffix {
+    top: calc(100% + 0.4rem);
+    right: 1.2rem;
+  }
+
+  &.affix {
+    .ant-input {
+      padding-left: calc(1.2rem + 0.8rem + 2.4rem);
+    }
+  }
+
+  .ant-input {
+    min-height: 35.5rem;
+    padding: 1.2rem;
+    border-radius: .8rem;
+    border: 1px solid $outer-space;
+    background: $shark;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: $white;
+    resize: none;
+
+    &::placeholder {
+      color: $pale-sky;
+    }
+  }
+}

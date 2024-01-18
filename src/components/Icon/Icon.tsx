@@ -73,6 +73,17 @@ import CoinSilver from './CoinSilver';
 import CoinRed from './CoinRed';
 import ShieldSsl from './ShieldSsl';
 import MasterCard from './MasterCard';
+import CheckCircleColor from './CheckCircleColor';
+import Info from './Info';
+import FlagUsa from './FlagUsa';
+import Telegram from './Telegram';
+import WhatApps from './WhatApps';
+import Website from './Website';
+import OnlyFan from './OnlyFan';
+import Twitter from './Twitter';
+import Instagram from './Instagram';
+import HandFinger from './HandFinger';
+import CalendarCheck from './CalendarCheck';
 
 const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) => {
   const renderIcon = (): React.ReactElement => {
@@ -215,6 +226,28 @@ const Icon: React.FC<TIconProps> = ({ name, className, color, style, onClick }) 
         return <ShieldSsl color={color} />;
       case EIconName.MasterCard:
         return <MasterCard color={color} />;
+      case EIconName.CheckCircleColor:
+        return <CheckCircleColor color={color} />;
+      case EIconName.Info:
+        return <Info color={color} />;
+      case EIconName.FlagUsa:
+        return <FlagUsa color={color} />;
+      case EIconName.Telegram:
+        return <Telegram color={color} />;
+      case EIconName.WhatApps:
+        return <WhatApps color={color} />;
+      case EIconName.Website:
+        return <Website color={color} />;
+      case EIconName.OnlyFan:
+        return <OnlyFan color={color} />;
+      case EIconName.Twitter:
+        return <Twitter color={color} />;
+      case EIconName.Instagram:
+        return <Instagram color={color} />;
+      case EIconName.HandFinger:
+        return <HandFinger color={color} />;
+      case EIconName.CalendarCheck:
+        return <CalendarCheck color={color} />;
 
       default:
         return <></>;
