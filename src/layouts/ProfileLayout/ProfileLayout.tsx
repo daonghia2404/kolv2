@@ -13,7 +13,7 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 
 const ProfileLayout: React.FC<TProfileLayoutProps> = ({ children }) => {
   return (
-    <GuestLayout>
+    <GuestLayout isLoggedDefault>
       <div className="ProfileLayout">
         <div className="container">
           <div className="ProfileLayout-wrapper flex">

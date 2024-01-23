@@ -25,13 +25,13 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
   ssr: false,
 });
 
-const Header: React.FC<THeaderProps> = () => {
+const Header: React.FC<THeaderProps> = ({ isLoggedDefault = false }) => {
   const router = useRouter();
   const { asPath } = router;
 
   const trans = useTrans();
 
-  const [isLogged, setIsLogged] = useState<boolean>(false);
+  const [isLogged, setIsLogged] = useState<boolean>(isLoggedDefault);
   const [drawerMenuMobileState, handleOpenDrawerMenuMobile, handleCloseDrawerMenuMobile] = useModalState();
   const [isScrollBelowHeader, setIsScrollBelowHeader] = useState<boolean>(false);
 
@@ -55,6 +55,11 @@ const Header: React.FC<THeaderProps> = () => {
         setIsScrollBelowHeader(false);
       }
     });
+  };
+
+  const handleLogout = (): void => {
+    setIsLogged(false);
+    router.push(Paths.Home);
   };
 
   useEffect(() => {
@@ -144,7 +149,7 @@ const Header: React.FC<THeaderProps> = () => {
                           styleType={EButtonStyleType.OUTLINE_RED}
                           iconName={EIconName.Logout}
                           iconColor={EIconColor.RADICAL_RED}
-                          onClick={(): void => setIsLogged(false)}
+                          onClick={handleLogout}
                         />
                       </Col>
                     </>
@@ -231,7 +236,7 @@ const Header: React.FC<THeaderProps> = () => {
           dataLocation={dataLocation}
           {...drawerMenuMobileState}
           onClose={handleCloseDrawerMenuMobile}
-          onLogout={(): void => setIsLogged(false)}
+          onLogout={handleLogout}
           onLogin={(): void => setIsLogged(true)}
         />
       </MediaQuery>

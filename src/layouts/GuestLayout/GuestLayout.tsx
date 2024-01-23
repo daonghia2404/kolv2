@@ -8,7 +8,7 @@ import { EIconColor, EIconName } from '@/components/Icon';
 
 import { TGuestLayoutProps } from './GuestLayout.types';
 
-const GuestLayout: React.FC<TGuestLayoutProps> = ({ children }) => {
+const GuestLayout: React.FC<TGuestLayoutProps> = ({ isLoggedDefault, children }) => {
   const [isShowBtnOnTop, setIsShowBtnOnTop] = useState<boolean>(false);
   const scrollToTop = (): void => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -31,7 +31,7 @@ const GuestLayout: React.FC<TGuestLayoutProps> = ({ children }) => {
   return (
     <div className="GuestLayout">
       <div className="GuestLayout-header">
-        <Header />
+        <Header isLoggedDefault={isLoggedDefault} />
       </div>
       <div className="GuestLayout-body">{children}</div>
       <div className="GuestLayout-footer">
