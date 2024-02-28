@@ -259,6 +259,45 @@ export const dataFilterCategoryOptions = [
   },
 ];
 
+export const dataFaqOptions = [
+  {
+    key: '1',
+    title: 'Parent 1',
+    children: [
+      {
+        key: '1.1',
+        title: 'Option 1.1'
+      },
+      {
+        key: '1.2',
+        title: 'Option 1.2'
+      },
+      {
+        key: '1.3',
+        title: 'Option 1.3'
+      },
+    ],
+  },
+  {
+    key: '2',
+    title: 'Parent 2',
+    children: [
+      {
+        key: '2.1',
+        title: 'Option 2.1'
+      },
+      {
+        key: '2.2',
+        title: 'Option 2.2'
+      },
+      {
+        key: '2.3',
+        title: 'Option 2.3'
+      },
+    ],
+  }
+];
+
 export const findChildrenOfOptions = (data: TMultipleCheckboxCollapseData): TMultipleCheckboxCollapseData[] => {
   const children: TMultipleCheckboxCollapseData[] = [];
 

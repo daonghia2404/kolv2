@@ -1,6 +1,16 @@
 @import '@/assets/styles/_global.scss';
 
 .MultipleCheckboxCollapse {
+  &.faq-collapse {
+    max-width: 100%;
+    width: 100%;
+
+    .ant-collapse .ant-collapse-content > .ant-collapse-content-box {
+      font-weight: 400;
+      color: #ffffff;
+      padding: 16px;
+    }
+  }
   .ant-collapse {
     border: none;
     background: transparent;
