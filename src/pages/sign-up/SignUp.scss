@@ -2,4 +2,8 @@
 
 .SignUp {
   max-width: 62.8rem;
+  &.Faq-page {
+    width: 62.8rem;
+    max-width: 100%;
+  }
 }

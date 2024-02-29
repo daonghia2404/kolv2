@@ -10,13 +10,13 @@ export const dataHeaderMenu = (data: any) => [
   {
     id: 'faq',
     title: data?.trans?.header?.faq,
-    link: '',
+    link: Paths.Faq,
     activePaths: [],
   },
   {
     id: 'support',
     title: data?.trans?.header?.support,
-    link: '',
+    link: Paths.Support,
     activePaths: [],
   },
 ];
@@ -41,9 +41,21 @@ export const dataHeaderChildPageMenu = (data: any) => [
     backPath: Paths.Home,
   },
   {
+    id: 'faq',
+    title: data?.trans?.header?.faq,
+    activePaths: [Paths.Faq],
+    backPath: Paths.Home,
+  },
+  {
     id: 'my-profile-photo-video',
     title: data?.trans?.header?.profile,
     activePaths: [Paths.MyPhotoVideo],
+    backPath: Paths.Home,
+  },
+  {
+    id: 'support',
+    title: data?.trans?.header?.support,
+    activePaths: [Paths.Support],
     backPath: Paths.Home,
   },
 ];

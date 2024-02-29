@@ -43,9 +43,12 @@ const Header: React.FC<THeaderProps> = ({ isLoggedDefault = false }) => {
   const detailPage = dataHeaderChildPageMenu(dataLocation).find((item) =>
     item.activePaths.includes(removeParam(asPath)),
   );
-  const isAuthPage = ['login', 'sign-up'].includes(detailPage?.id as string);
+  
+  const isAuthPage = ['login', 'sign-up','faq','support'].includes(detailPage?.id as string);
   const isLoginPage = isAuthPage && (detailPage?.id as string) === 'login';
   const isSignUpPage = isAuthPage && (detailPage?.id as string) === 'sign-up';
+  const isFaqPage = isAuthPage && (detailPage?.id as string) === 'faq';
+  const isSupportPage = isAuthPage && (detailPage?.id as string) === 'support';
 
   const triggerScrollToHeaderHeight = (): void => {
     window.addEventListener('scroll', (e) => {
@@ -192,7 +195,7 @@ const Header: React.FC<THeaderProps> = ({ isLoggedDefault = false }) => {
                         </>
                       )}
 
-                      {isSignUpPage && (
+                      {isSignUpPage || isFaqPage || isSupportPage ? (
                         <Button
                           title={trans?.header?.login}
                           styleType={EButtonStyleType.OUTLINE_RED}
@@ -201,7 +204,7 @@ const Header: React.FC<THeaderProps> = ({ isLoggedDefault = false }) => {
                           reverse
                           link={Paths.Login}
                         />
-                      )}
+                      ) : ''}
 
                       {isLoginPage && (
                         <Button

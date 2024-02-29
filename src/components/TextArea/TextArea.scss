@@ -42,4 +42,9 @@
       color: $pale-sky;
     }
   }
+  &.support-textarea {
+    .ant-input {
+      min-height: 14rem;
+    }
+  }
 }
