@@ -1,3 +1,9 @@
 @import '@/assets/styles/_global.scss';
 
-.Modal {}
+.Modal {
+  &.popup-support {
+    .Modal-actions {
+      gap: 10px;
+    }
+  }
+}

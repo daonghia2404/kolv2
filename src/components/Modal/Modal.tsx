@@ -22,6 +22,8 @@ const Modal: React.FC<TModalProps> = ({
   maskStyle,
   onClose,
   onSubmit,
+  titleActionOk,
+  titleActionCancel,
 }) => {
   return (
     <AntdModalModify
@@ -49,14 +51,14 @@ const Modal: React.FC<TModalProps> = ({
           {showActions && (
             <div className="Modal-actions flex justify-center">
               <Button
-                title="Đồng ý"
+                title={titleActionOk || "Đồng ý"}
                 styleType={EButtonStyleType.RED}
                 disabled={loading}
                 onClick={onSubmit}
                 {...confirmButton}
               />
               <Button
-                title="Huỷ bỏ"
+                title={titleActionCancel || "Huỷ bỏ"}
                 styleType={EButtonStyleType.OUTLINE_RED}
                 disabled={loading}
                 onClick={onClose}
