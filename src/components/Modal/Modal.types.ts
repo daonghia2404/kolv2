@@ -19,4 +19,6 @@ export type TModalProps = {
   maskStyle?: CSSProperties;
   onClose?: () => void;
   onSubmit?: () => void;
+  titleActionOk?: string,
+  titleActionCancel?: string,
 };
